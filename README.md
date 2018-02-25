@@ -24,5 +24,6 @@ Invoke the bot on a specific level:
 
 
 ### WIP  
-Only hard clues are implemented so far. It took some time to find a decent item-to-ID for usage with the GE API, and even then, it was outdated. 
+Only hard clues are implemented so far. It took some time to find a decent item-to-ID for usage with the GE API, and even then, it was outdated.  
+
 The items_ID.JSON file is in the repository and was most likely made around mid-2016 and the game has obviously progressed a lot since then so some things will have to be manually added.
