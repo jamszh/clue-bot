@@ -17,7 +17,7 @@ module.exports = [
     { item: 'Magic comp bow', freq: 1, id: '10284' },
     { item: 'Lobster', freq: 1 + Math.floor(Math.random() * 40), id: '379' },
     { item: 'Shark', freq: 1 + Math.floor(Math.random() * 50), id: '385' },
-    { item: 'Purple sweets', freq: 1 + Math.floor(Math.random() * 80), id: '10476' },
+    { item: 'Purple sweets', freq: 1 + Math.floor(Math.random() * 45), id: '10476' },
     { item: 'Law rune', freq: 1 + Math.floor(Math.random() * 50), id: '563' },
     { item: 'Nature rune', freq: 1 + Math.floor(Math.random() * 50), id: '561' },
     { item: 'Blood rune', freq: 1 + Math.floor(Math.random() * 50), id: '565' },
