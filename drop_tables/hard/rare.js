@@ -105,5 +105,9 @@ module.exports = [
     { item: 'Pith helmet', freq: 1, id: '12516' },
     { item: 'Explorer backpack', freq: 1, id: '12514' },
     { item: 'Rune cane', freq: 1, id: '12379' },
+    { item: 'Zombie head', freq: 1, id: '19912' },
+    { item: 'Cyclops head', freq: 1, id: '19915' },
+    { item: 'Nunchaku', freq: 1, id: '19918' },
+    { item: 'Dragon boots ornament kit', freq: 1, id: '22231' },
     super_rare_table
 ];
