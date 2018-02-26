@@ -13,9 +13,9 @@ const horizontal_rule = "\n***\n";
 
 
 // Imported internal modules
-var Roller = require('./roller');
-var Sanitiser = require('./sanitiser');
-var Formatter = require('./formatter');
+var Roller = require('./src/roller');
+var Sanitiser = require('./src/sanitiser');
+var Formatter = require('./src/formatter');
 
 // Build Snoowrap and Snoostorm clients
 const r = new Snoowrap({
