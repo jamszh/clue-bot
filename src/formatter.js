@@ -76,8 +76,14 @@ function convert_to_dec(str){
 function convert_to_string(value){
 	var str = value.toString();
 
+
+	//100m - 2147m
+	if(value >= 100000000){
+		str = str.subString(0, 24) + "m";
+	}
+
 	// 10m - 100m
-	if(value >= 10000000){
+	else if(value >= 10000000){
 		str = str.subString(0, 2) + "." + str.substring(2, 4) + "m";
 
 	// 1m - 10m
@@ -95,8 +101,6 @@ function convert_to_string(value){
 	// 1k - 10k
 	}else if(value >= 1000){
 		str = str.substring(0, 1) + "," + str.substring(1, str.length);
-
-	
 	}
 
 	// 1gp - 1k : default
