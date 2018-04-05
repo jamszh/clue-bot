@@ -74,21 +74,31 @@ function convert_to_dec(str){
 
 // Convert long numbers back into readable 'osrs' convention
 function convert_to_string(value){
-	var str;
-	if(value >= 1000000){
-		str = value.toString();
+	var str = value.toString();
+
+	// 10m - 100m
+	if(value >= 10000000){
+		str = str.subString(0, 2) + "." + str.substring(2, 4) + "m";
+
+	// 1m - 10m
+	}else if(value >= 1000000){
 		str = str.substring(0, 1) + "." + str.substring(1,2) + "m";
+
+	// 100k - 1m
 	}else if(value >= 100000){
-		str = value.toString();
 		str = str.substring(0, 3) + "." + str.substring(3, 4) + "k";
+
+	// 10k - 100k
 	}else if(value >= 10000){
-		str = value.toString();
 		str = str.substring(0, 2) + "." + str.substring(2, 3) + "k";
+
+	// 1k - 10k
 	}else if(value >= 1000){
-		str = value.toString();
 		str = str.substring(0, 1) + "," + str.substring(1, str.length);
-	}else{
-		str = value.toString();
+
+	
 	}
+
+	// 1gp - 1k : default
     return str;
 }
