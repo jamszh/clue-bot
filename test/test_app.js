@@ -15,8 +15,6 @@ var roller = new Roller(level);
 // })
 
 
-for(var i = 0; i < 10000; i++){
-	var out = roller.roll();
-	console.log(out);
-}
+
+roller.roll();
 
