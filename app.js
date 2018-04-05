@@ -29,7 +29,7 @@ const client = new Snoostorm(r);
 
 // Configure options for stream: subreddit & results per query
 const streamOpts = {
-    subreddit: '2007scape',
+    subreddit: '2007scape_cluebot',
     results: 20
 };
 
