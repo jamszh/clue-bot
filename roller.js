@@ -1,5 +1,3 @@
-var pricer = require('./pricer');
-
 module.exports = class Roller {
 
 	constructor(level){

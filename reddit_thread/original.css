@@ -1,0 +1,3262 @@
+/* wiki margin fix */
+.wiki-page .wiki-page-content{margin-right:0!important}
+form.toggle.res-sr-style-toggle {
+    background:transparent;
+}
+.toggle.sr_style_toggle{
+background-color:transparent !important;
+}
+.side {
+width:336px;
+background-image:
+url(%%left-pillar-top%%),
+url(%%left-pillar-bottom%%),
+url(%%left-pillar-repeat-midsection%%),
+url(%%right-pillar-top%%),
+url(%%right-pillar-bottom%%),
+url(%%right-pillar-repeat-midsection%%),
+url(%%sidebar-bg-full-width%%);
+
+background-repeat:
+/* Left pillar */
+no-repeat,
+no-repeat,
+repeat-y,
+/* Background */
+/* Right pillar */
+no-repeat,
+no-repeat,
+repeat-y,
+repeat-y;
+
+background-position:
+
+0px 0px,
+0px 100%,
+0px 108px,
+
+
+100% 0px,
+100% 100%,
+100% 108px,
+
+20px 0px;
+}
+
+.stylesheet-customize-container .sheets {
+margin-right:20px;
+}
+
+ .content #siteTable.linklisting{
+margin-right:5px;
+}
+
+body {
+background-image:url(%%bl-tile-side%%);
+background-position:right center;
+background-repeat:repeat-y;
+}
+
+
+.side {
+margin-right:17px;
+padding-left:23px;
+padding-right:23px;
+background-color:transparent;
+box-sizing:border-box;
+}
+
+.side:before {
+display:block;
+width:336px;
+margin-top:-36px;
+height:36px;
+content:" ";
+position:relative;
+top:-7px
+float:left;
+left:-23px;
+background-image:url(%%top-stones-full-width%%);
+background-repeat:no-repeat;
+}
+
+.side:after {
+display:block;
+width:336px;
+height:36px;
+content:" ";
+position:relative;
+bottom:-36px;
+left:-23px;
+background-image:url(%%bottom-stones-full-width%%);
+}
+
+.side .spacer:first-of-type{
+clear:both;
+}
+ 
+.side hr {
+height:0px;
+margin:0 auto !important;
+}
+
+.side .titlebox {
+}
+.side .spacer {
+    margin: 7px 0 0px 0;
+}
+/*
+.side > * {
+opacity:0;
+}
+*/
+
+.side form#search {
+margin:auto 3px;
+}
+
+.side #search input[name="q"] {
+box-sizing:border-box;
+max-width:100%;
+background-color:#413729;
+border:1px solid #564b3a;
+border-radius:3px;
+-webkit-border-radius:3px;
+-moz-border-radius:3px;
+outline:none;
+color:#e3d8c6;
+}
+
+.side #search input[name="q"]:active,
+.side #search input[name="q"]:focus{
+outline:none;
+border:1px solid #7e6640;
+}
+
+.side #search input[type="submit"],
+.side #search input[type="submit"]:hover{
+background-image:url(%%new-spritesheet%%);
+background-position:-153px -268px;
+background-color:transparent !important;
+width:14px;
+height:14px;
+}
+
+.side #searchexpando {
+background-image:url(%%border-bottom%%), url(%%top-border%%),url(%%right-border%%), url(%%left-border%%), url(%%sidebarbg%%);
+background-position:bottom center, top center, right center, left center, center center;
+background-repeat:repeat-x,repeat-x, repeat-y, repeat-y, repeat;
+border:0px solid transparent;
+background-color:transparent;
+}
+
+.side #searchexpando label,
+.side #searchexpando p,
+.side #searchexpando dt,
+.side #searchexpando dl,
+.side #searchexpando dd {
+color:white !important;
+}
+
+.side #searchexpando a {
+color:#fff000 !important;
+}
+
+.sidebox.submit {
+display:none !important;
+}
+
+.sidebox.submit > .morelink {
+display: block;
+text-align: center;
+position: relative;
+border: 0px solid transparent;
+background: transparent;
+background-image: url(%%submits%%);
+background-repeat: repeat;
+font-size: initial;
+font-weight: bold;
+letter-spacing: 0px;
+line-height: 30px;
+height: 30px;
+width:140px;
+text-indent:-9999px;
+}
+.sidebox.submit.submit-text > .morelink {
+background-position: -140px 0px;
+margin-left:4px;
+}
+.sidebox.submit.submit-text:hover > .morelink {
+background-position: -140px -30px;
+}
+
+.sidebox.submit.submit-link > .morelink {
+background-position: 0px 0px;
+}
+.sidebox.submit.submit-link:hover > .morelink {
+background-position: 0px -30px;
+}
+.sidebox.submit > .morelink > .nub{
+display:none;
+}
+.sidebox.submit.submit-link{
+margin-left:3px;
+float:left;
+}
+
+/* sidebar flex reordering */
+
+.side .titlebox {
+display: flex;
+flex-flow: column wrap;
+justify-content: space-around;
+width: 100%;
+color:#DCD2C2 !important;
+}
+
+.side .titlebox div {
+order:10;
+}
+
+.side .titlebox form.toggle.flairtoggle {
+order:1;
+}
+
+.side .titlebox .tagline {
+order:1;
+}
+
+.side .titlebox .users-online {
+order:0;
+}
+
+.side .titlebox .subscribers {
+order:0;
+}
+
+.side .titlebox .subButtons {
+order:0;
+}
+
+.side .titlebox form.usertext {
+order:2;
+}
+
+.side .titlebox form.toggle.leavecontributor-button {
+display:none;
+order:3;
+}
+
+.side .titlebox .leavemoderator {
+display:none;
+order:3;
+}
+
+.side .titlebox .bottom {
+order:4;
+}
+
+.side .titlebox h1.redditname {
+display:none;
+}
+
+
+.side .titlebox .md > * {
+color:#DCD2C2;
+}
+
+
+
+
+.titlebox span.word {
+display: none;
+}
+
+.titlebox span.number {
+color:white;
+}
+
+.titlebox span.number:after {
+content: " players from the past";
+color:white;
+}
+
+.titlebox .users-online span.number:after {
+color:white;
+content: " players online";
+}
+
+
+.side .titlebox .md a[href*="#skilloftheweek"]{ 
+background-image:url(%%new-spritesheet%%);
+background-position:-605px -98px;
+height:90px;
+display:block;
+width:100%;
+color:#fff000;
+font-size:30px;
+text-align:center;
+padding-top:50px;
+box-sizing:border-box;
+font-weight:bold;
+font-family:Georgia;
+text-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+}
+
+.side .titlebox .md a[href*="#current_event"]{ 
+background-image:url(%%new-spritesheet%%), url(%%event-image%%);
+background-position:-605px 0px, 0px 0px;
+height:90px;
+display:block;
+width:100%;
+color:#fff000;
+font-size:25px;
+text-align:center;
+padding-top:50px;
+box-sizing:border-box;
+font-weight:bold;
+font-family:Georgia;
+text-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+}
+.side .titlebox .md h5 {
+margin:0px !important;
+}
+
+.side .titlebox .md h5 a[href*="USERNAMEHERE"] {
+background-image:url(%%new-spritesheet%%);
+background-position:-217px -175px;
+background-repeat:no-repeat;
+height:50px;
+line-height:50px;
+display:block;
+box-sizing:border-box;
+font-size:12px;
+color:white;
+font-weight:normal;
+text-align:center;
+padding-top:15px;
+margin-top:15px;
+}
+
+.side .titlebox .md h5 a[href*="USERNAMEHERE"]:hover {
+text-decoration:underline;
+}
+
+.side .titlebox .md a[href="https://www.reddit.com/r/2007scape/wiki/cc_rules"]{
+background-image:url(%%new-spritesheet%%);
+background-position:-310px 0px;
+height:120px;
+display:block;
+width:100%;
+color:#fff000;
+font-size:30px;
+text-align:center;
+padding-top:50px;
+box-sizing:border-box;
+text-indent:-9999px;
+font-size:0px;
+
+
+}
+.res .side .subscribers {
+margin-top:35px;
+}
+
+.side .users-online{
+margin-bottom:10px !important;
+}
+
+.side .subscribers,
+.side .users-online  {
+text-align:center;
+font-size:12px;
+}
+
+.side .users-online:before {
+background-image:url(%%new-spritesheet%%);
+background-position: -179px -187px;
+background-repeat: no-repeat;
+width: 15px;
+height: 15px;
+position: relative;
+top: 3px;
+left: 0px;
+margin-top: -5px;
+display: inline-block;
+float: none;
+}
+
+
+.side .sponsorshipbox {
+overflow:hidden;
+}
+
+.subButtons {
+height:30px;
+position:relative;
+}
+
+
+.fancy-toggle-button {
+height: 30px;
+margin: 0px;
+margin-right:5px;
+text-align: center;
+position:relative;
+}
+
+
+
+.subButtons .fancy-toggle-button a.option.add,
+.titlebox .fancy-toggle-button a.option.add{
+text-align: center;
+top:0px;
+left:0px;
+position: absolute;
+border: 0px solid transparent;
+background: transparent;
+background-image: url(%%submits%%);
+background-position:-280px 0px;
+background-repeat: repeat;
+font-size: initial;
+font-weight: bold;
+letter-spacing: 0px;
+line-height: 30px;
+height: 30px !important;
+width:140px !important;
+padding: 0px !important;
+margin-left:3px !important;
+text-indent:-9999px;
+font-size:0px;
+cursor:pointer !important;
+}
+
+.subButtons .fancy-toggle-button a.option.remove,
+.titlebox .fancy-toggle-button a.option.remove{
+text-align: center;
+top:0px;
+left:0px;
+position: absolute;
+border: 0px solid transparent;
+background: transparent;
+background-image: url(%%submits%%);
+background-position:-280px -30px;
+background-repeat: repeat;
+font-size: initial;
+font-weight: bold;
+letter-spacing: 0px;
+line-height: 30px;
+height: 30px !important;
+width:140px !important;
+padding: 0px !important;
+margin-left:3px !important;
+text-indent:-9999px;
+font-size:0px;
+cursor:pointer !important;
+}
+
+body:not(.res) .titlebox .fancy-toggle-button a.option.add,
+body:not(.res) .titlebox .fancy-toggle-button a.option.remove{
+left:70px !important;
+}
+
+:not(.subButtons) > .fancy-toggle-button a.option.remove,
+:not(.subButtons) > .fancy-toggle-button a.option.add {
+position:absolute;
+top:0px;
+}
+
+/* dashboard */
+
+.RESDashboardToggle{
+text-align: center !important;
+position: absolute !important;
+top:0px;
+right:0px;
+border: 0px solid transparent !important;
+background-color: transparent !important;
+background-image: url(%%submits%%) !important;
+background-position:-420px 0px !important;
+background-repeat: no-repeat !important;
+font-size: initial !important;
+font-weight: bold !important;
+letter-spacing: 0px !important;
+line-height: 30px !important;
+height: 30px !important;
+width:140px !important;
+padding:0px !important;
+margin:0px !important;
+text-indent:-9999px !important;
+font-size:0px !important;
+cursor:pointer !important;
+}
+
+.RESDashboardToggle.remove{
+background-position:-420px -30px !important;
+}
+
+
+.RESshortcutside{
+text-align: center !important;
+position: absolute !important;
+bottom:-33px;
+left:70px;
+border: 0px solid transparent !important;
+background-color: transparent !important;
+background-image: url(%%submits%%) !important;
+background-position:-420px -60px !important;
+background-repeat: no-repeat !important;
+font-size: initial !important;
+font-weight: bold !important;
+letter-spacing: 0px !important;
+height: 30px !important;
+width:140px !important;
+padding: 0px !important;
+margin:0px !important;
+text-indent:-9999px !important;
+font-size:0px !important;
+cursor:pointer !important;
+float:left;
+}
+
+.RESshortcutside.remove{
+text-align: center !important;
+position: absolute !important;
+bottom:-33px;
+left:70px;
+border: 0px solid transparent !important;
+background-color: transparent !important;
+background-image: url(%%submits%%) !important;
+background-position:-420px -90px !important;
+background-repeat: no-repeat !important;
+font-size: initial !important;
+font-weight: bold !important;
+letter-spacing: 0px !important;
+height: 30px !important;
+width:140px !important;
+padding: 0px !important;
+margin:0px !important;
+text-indent:-9999px !important;
+font-size:0px !important;
+cursor:pointer !important;
+float:left;
+}
+
+.titlebox .toggle.flairtoggle {
+background-color:transparent !important;
+margin-top:-5px;
+}
+ 
+.toggle.flairtoggle input[type="checkbox"] {
+height:0px;
+margin:0px 5px 0px 5px;
+}
+
+.toggle.flairtoggle input[type="checkbox"]:after {
+position:relative;
+top:-11px;
+height:15px;
+width:15px;
+background-image:url(%%new-spritesheet%%);
+background-position:-152px -167px;
+content:" ";
+display:block;
+}
+
+.toggle.flairtoggle input[type="checkbox"]:checked:after {
+background-position:-152px -152px;
+}
+
+.toggle.flairtoggle label {
+background-image:url(%%strings%%);
+    width: 257px;
+    height: 14px;
+text-indent:-9999px;
+    display: inline-block;
+    background-position: 0px 0px;
+}
+.titlebox .tagline {
+margin-left:22px;
+}
+
+.titlebox .tagline,
+.titlebox .tagline a.author,
+.titlebox .tagline a.flairselectbtn {
+color:#ff981f;
+font-weight:bold;
+font-size:11px;
+text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+}
+
+
+/*Twitch*/
+.side p {
+margin:0px !important;
+}
+
+.side h6 {
+display:none;
+}
+
+.side h6 + blockquote blockquote {
+height:66px;
+margin:0px;
+padding:0px;
+background-repeat:no-repeat;
+text-align:center;
+background-position:center center;
+}
+.side h6 + blockquote blockquote p {
+width:100%;
+box-sizing:border-box;
+padding-top:20px;
+}
+
+.side h6 + blockquote blockquote a {
+pointer-events:none;
+text-align:center !important;
+font-size:16px;
+text-align:center;
+color:#DCD2C2 !important;
+}
+
+.side h6 + blockquote {
+margin:0px !important;
+width:100%;
+box-sizing:border-box;
+border-left:0px;
+padding:0px;
+}
+
+.side h6 + blockquote ol,
+.side h6 + blockquote blockquote{
+list-style-type:none;
+padding-bottom:7px;
+padding-left:0px;
+display: flex;
+flex-flow: row wrap;
+/* justify-content: space-around; */
+background-image:url(%%twitch-background%%);
+background-color:transparent;
+max-height:250px;
+overflow:hidden;
+position:relative;
+    -webkit-transition: max-height 800ms;
+    -moz-transition: max-height 800ms;
+    -o-transition: max-height 800ms;
+    transition: max-height 800ms;
+}
+.side h6 + blockquote ol:after,
+.side h6 + blockquote blockquote:after {
+display:block;
+position:absolute;
+content:" ";
+width:290px;
+height:24px;
+bottom:0px;
+left:0px;
+background-image:url(%%twitch-bottom-border%%);
+z-index:3;
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    -o-transition: all 500ms;
+    transition: all 500ms;
+}
+
+.side h6 + blockquote ol:hover:after{
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    -o-transition: all 500ms;
+    transition: all 500ms;
+background-position:196px 0px;
+}
+
+.side h6 + blockquote ol:hover {
+    -webkit-transition: max-height 800ms;
+    -moz-transition: max-height 800ms;
+    -o-transition: max-height 800ms;
+    transition: max-height 800ms;
+max-height:420px;
+}
+
+.side h6 + blockquote ol li {
+order:2;
+position:relative;
+overflow:hidden;
+width:95px;
+height:66px;
+display:inline-block;
+box-sizing:border-box;
+background-image: url(%%stream-bg-66%%), url(%%img%%);
+text-indent:-9999px;
+font-size:0px;
+list-style-type:none;
+}
+
+.side h6 + blockquote ol li a {
+color:#fff !important;
+text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+display:inline-block;
+text-decoration:none !important;
+}
+
+.side h6 + blockquote ol li a[href*="#link"] {
+width:100%;
+height:100%;
+display:block;
+}
+
+.side h6 + blockquote ol li a[href*="#name"] {
+margin:7px 7px;
+position:absolute;
+bottom:0px;
+font-size:11px;
+text-indent:0px;
+max-height:15px;
+overflow:hidden;
+pointer-events:none;
+}
+
+.side h6 + blockquote ol li a[href*="#viewers"] {
+font-size:11px;
+text-indent:0px;
+position:absolute;
+left:10px;
+pointer-events:none;
+bottom:21px;
+}
+
+.side h6 + blockquote ol li a[href*="#viewers"]:before {
+background-image:url(%%new-spritesheet%%);
+background-repeat:no-repeat;
+background-position:-153px -246px;
+width:12px;
+height:12px;
+display:inline-block;
+content:" ";
+pointer-events:none;
+margin-bottom:-2px;
+margin-right:3px;
+}
+
+.side h6 + blockquote ol li a[href*="#title"] {
+position:absolute;
+top:5px;
+left:5px;
+width:180px;
+word-break: break-all;
+pointer-events:none;
+max-height:30px;
+margin:5px 5px;
+}
+
+.side h6 + blockquote ol li:nth-of-type(1) a[href*="#title"] {
+font-size:11px;
+text-indent:0px;
+}
+
+.side h6 + blockquote ol li:nth-of-type(1) {
+order:0 !important;
+background-image:url(%%stream-bg-large%%), url(%%img%%);
+width:194px;
+height:96px;
+}
+
+.side h6 + blockquote ol li:nth-of-type(2) {
+background-image: url(%%stream-bg%%), url(%%img%%);
+background-position:0px 0px, 0px -96px;
+height:96px;
+}
+
+.side h6 + blockquote ol li:nth-of-type(3) {
+background-position:0px 0px, 0px -192px;
+}
+
+.side h6 + blockquote ol li:nth-of-type(4) {
+background-position:0px 0px, 0px -258px;
+}
+
+.side h6 + blockquote ol li:nth-of-type(5) {
+background-position:0px 0px, 0px -324px;
+}
+
+.side h6 + blockquote ol li:nth-of-type(6) {
+background-position:0px 0px, 0px -390px;
+}
+
+.side h6 + blockquote ol li:nth-of-type(7) {
+background-position:0px 0px, 0px -456px;
+}
+
+.side h6 + blockquote ol li:nth-of-type(8) {
+background-position:0px 0px, 0px -522px;
+}
+
+.side h6 + blockquote ol li:nth-of-type(9) {
+background-position:0px 0px, 0px -588px;
+}
+
+.side h6 + blockquote ol li:nth-of-type(10) {
+background-position:0px 0px, 0px -654px;
+}
+
+.side h6 + blockquote ol li:nth-of-type(11) {
+background-position:0px 0px, 0px -720px;
+}
+
+.side h6 + blockquote ol li:nth-of-type(12) {
+background-position:0px 0px, 0px -786px;
+}
+
+.side h6 + blockquote ol li:nth-of-type(13) {
+background-position:0px 0px, 0px -852px;
+}
+
+
+.side h6 + blockquote ol li:nth-of-type(14) {
+background-position:0px 0px, 0px -918px;
+}
+
+.side h6 + blockquote ol li:nth-of-type(15) {
+background-position:0px 0px, 0px -984px;
+}
+
+.side h6 + blockquote ol li:nth-child(3n) {
+width:98px;
+}
+
+.side .md h2 {
+margin-top:20px !important;
+margin-bottom:12px !important;
+height:auto !important;
+display:block;
+width:100%;
+color: #DCD2C2;
+font-size:30px !important;
+line-height:30px !important;
+text-align:center;
+box-sizing:border-box;
+font-weight:bold;
+font-family:Georgia;
+text-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+padding-bottom:5px;
+background-image:url(%%border-bottom%%);
+background-repeat:repeat-x;
+background-position:bottom center;
+}
+
+.side .md h3 {
+margin-top:8px !important;
+margin-bottom:12px !important;
+height:auto !important;
+display:block;
+width:100%;
+color: #DCD2C2;
+font-size:30px !important;
+line-height:30px !important;
+text-align:center;
+box-sizing:border-box;
+font-weight:bold;
+font-family:Georgia;
+text-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+padding-bottom:5px;
+}
+.side .md blockquote {
+border-left:0px;
+}
+
+.side .md blockquote > p {
+margin:auto 10px;
+}
+
+.side .md ul {
+margin:auto 10px;
+padding-left:0px;
+list-style-type:none;
+}
+
+.side .md ul li {
+position:relative;
+margin-bottom:5px;
+padding-left:20px
+}
+
+.side .md ul li:before {
+background-image:url(%%new-spritesheet%%);
+width:15px;
+height:15px;
+background-position: -179px -187px;
+display:inline-block;
+content:" ";
+position:absolute;
+top:0px;
+left:0px;
+}
+
+
+
+.side .md blockquote a,
+.side .md ul a{
+color:#fff000;
+}
+
+.side .md blockquote a:hover,
+.side .md ul a:hover {
+text-decoration:underline;
+}
+
+
+.side .titlebox .bottom { 
+background-image:url(%%border-bottom%%);
+height:6px;
+border:0px solid transparent;
+text-indent:-9999px;
+}
+
+
+.side .titlebox .bottom a,
+.side .titlebox .bottom span {
+display:none !important;
+}
+
+.sidecontentbox#moderation_tools h1 {
+    height: auto!important;
+    display: inline-block;
+    color: #DCD2C2;
+    font-size: 17px!important;
+    line-height: 17px!important;
+    text-align: center;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: Georgia;
+    text-shadow: 4px 4px 0px #000;
+
+}
+
+.sidecontentbox#moderation_tools .content {
+border:0px solid transparent;
+background-image:url(%%border-bottom%%), url(%%border-bottom%%);
+background-position:bottom center,top center;
+background-repeat:no-repeat, no-repeat;
+}
+
+.sidecontentbox#moderation_tools .content li a{
+background-color:transparent;
+color:#fff000;
+}
+
+
+.side iframe#ad_main {
+width:290px;
+overflow:hidden;
+}
+
+.side .sidebox.create .morelink {
+background-color:transparent;
+width:260px;
+background-image:url(%%submits%%);
+background-position:-560px 0px;
+border:0px solid transparent;
+background-repeat:no-repeat;
+font-size:0px;
+text-indent:-9999px;
+line-height:30px;
+height:30px;
+margin:0 auto;
+}
+.side .sidebox.create .morelink:hover {
+background-position:-560px -30px;
+}
+.side .sidebox.create .morelink .nub {
+display:none;
+}
+
+.side .sidebox.create .spacer {
+background-color:transparent;
+}
+
+.side .sidebox.create .subtitle {
+background-color:transparent;
+color:#d2d2d2;
+}
+
+
+.side .sidecontentbox .helplink {
+background-color:transparent;
+width:260px;
+background-image:url(%%submits%%);
+background-position:-560px -60px;
+border:0px solid transparent;
+background-repeat:no-repeat;
+font-size:0px;
+text-indent:-9999px;
+line-height:30px;
+height:30px;
+margin:0px 15px 0px 15px;
+}
+.side .sidecontentbox .helplink:hover {
+background-position:-560px -90px;
+}
+
+.side .sidecontentbox h1 {
+font-size:0px;
+}
+
+.side .sidecontentbox .content {
+border:0px solid transparent;
+background-image:url(%%border-bottom%%), url(%%border-bottom%%);
+background-position:bottom center,top center;
+background-repeat:no-repeat, no-repeat;
+}
+
+.side .sidecontentbox .content li a{
+background-color:transparent;
+color:#fff000;
+}
+
+.side .sidecontentbox .content li a:hover{
+text-decoration:underline;
+}
+.side .sidecontentbox .content span {
+color:#D2D2D2;
+}
+
+
+.account-activity-box{
+margin-bottom: 5px;
+}
+
+.account-activity-box p a {
+color:#fff000;
+}
+
+
+.side form#login_login-main {
+border:0px solid transparent;
+background-image:url(%%border-bottom%%), url(%%border-bottom%%);
+background-position:bottom center,top center;
+background-repeat:no-repeat, no-repeat;
+padding-bottom:5px;
+}
+.side form#login_login-main label {
+color:#D2D2D2;
+}
+.side form#login_login-main a {
+color:#fff000;
+}
+
+.side form#login_login-main input[type="text"] {
+width:135px;
+display:inline-block;
+}
+.side form#login_login-main input[type="password"]{
+display:inline-block;
+}
+
+.side form#login_login-main input[type="checkbox"] {
+height:0px;
+margin:0px 5px 0px 5px;
+}
+
+.side form#login_login-main input[type="checkbox"]:after {
+position:relative;
+top:-8px;
+height:15px;
+width:15px;
+background-image:url(%%new-spritesheet%%);
+background-position:-152px -167px;
+content:" ";
+display:block;
+}
+
+.side form#login_login-main input[type="checkbox"]:checked:after {
+background-position:-152px -152px;
+}
+
+.side .linkinfo {
+box-sizing: border-box;
+max-width: 100%;
+background-color: #413729;
+border: 1px solid #564b3a;
+border-radius: 3px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+outline: none;
+width:284px;
+margin:0 auto;
+color: #DCD2C2;
+}
+
+.side .linkflairlabel {
+display:none;
+}
+
+
+.flairselector.drop-choices.active {
+background-image:url(%%top-border%%), url(%%left-border%%),url(%%right-border%%), url(%%border-bottom%%), url(%%sidebarbg%%);
+background-position:top center, left center, right center, bottom center, center center;
+background-repeat: repeat-x, repeat-y, repeat-y, repeat-x, repeat;
+border:0px !important;
+text-shadow:none !important;
+box-shadow:none !important;
+}
+
+.flairselector.drop-choices.active h2 {
+background-image:url(%%border-bottom%%);
+background-position:bottom center;
+padding-bottom:6px;
+background-color:transparent;
+background-repeat:repeat-x;
+color:white;
+}
+
+.flairselector.drop-choices.active .flairoptionpane ul li {
+background-color:transparent;
+border:0px !important;
+}
+
+.flairselector .flairoptionpane {
+    max-height:300px;
+}
+.flairselector.drop-choices.active .flairoptionpane ul li a{
+text-shadow:none;
+color:#fff000 !important;
+}
+
+.side .flair {
+text-shadow:none !important;
+}
+
+.flairselector.drop-choices.active .flairselection a,
+.flairselector.drop-choices.active .flairselection div  {
+color:white !important;
+}
+
+#header {
+margin:0px;
+background-color:#000;
+background-image:url(%%top-border%%), url(%%border-bottom%%), url(%%header%%);
+background-repeat:repeat-x, repeat-x, repeat-x;
+background-position:0px 19px, bottom center, 0px 25px;
+
+height: 181px;
+border-bottom:0px solid transparent;
+}
+
+.pagename {
+position:absolute;
+left:446px;
+bottom:30px;
+}
+
+#header-bottom-left {
+height:156px;
+}
+
+#header-bottom-left span.hover.pagename.redditname a{
+content:"Logo by /u/HippiePete";
+text-indent:-9999px;
+position:absolute;
+left:-420px;
+bottom:-23px;
+display:block;
+width:310px;
+height:152px;
+background-image:url(%%2007scape-logo%%);
+background-repeat: no-repeat;
+}
+
+#header-bottom-left span.hover.pagename.redditname {
+color:white;
+}
+
+#header-bottom-left a#header-img-a img{
+display:none;
+}
+
+#header-bottom-left a#header-img-a {
+height:40px;
+width:120px;
+display:block;
+left:23px;
+background-repeat:no-repeat;
+background-image:url(%%new-spritesheet%%);
+position:absolute;
+bottom:6px;
+z-index:2;
+-webkit-animation: snoos 15s steps(7) infinite;
+-moz-animation: snoos 15s steps(7) infinite;
+-ms-animation: snoos 15s  steps(7) infinite;
+-o-animation: snoos 15s  steps(7) infinite;
+animation: snoos 15s steps(7) infinite;
+}
+html[lang="bl"] #header-bottom-left a#header-img-a {
+display:none;
+}
+
+@-webkit-keyframes snoos {
+   from { background-position:-0px -152px;}
+     to { background-position:-0px -432px;}
+}
+
+@-moz-keyframes snoos {
+   from { background-position:-0px -152px;}
+     to { background-position:-0px -432px;}
+}
+
+@-ms-keyframes snoos {
+   from { background-position:-0px -152px;}
+     to { background-position:-0px -432px;}
+}
+
+@keyframes snoos {
+   from { background-position:-0px -152px;}
+     to { background-position:-0px -432px;}
+}
+
+
+#header-bottom-left ul.tabmenu {
+position:absolute;
+bottom:-42px;
+background-image:url(%%border-bottom%%), url(%%bl-tile%%);
+background-repeat:repeat-x, repeat-x;
+background-position:center bottom, 0px 0px;
+width:100%;
+right:380px;
+padding-left:380px;
+box-sizing:border-box;
+height:42px;
+}
+
+#header-bottom-left ul.tabmenu li {
+position:relative;
+top:10px;
+height:36px;
+}
+
+#header-bottom-left ul.tabmenu li a{
+background-color:transparent;
+background-image:url(%%border-bottom%%), url(%%left-border%%), url(%%right-border%%), url(%%sidebarbg%%);
+background-position:bottom center, left center, right center,  center center;
+background-repeat:repeat-x, repeat-y, repeat-y,  repeat;
+border:0px;
+color:white;
+font-size:14px;
+padding:10px;
+font-weight:normal;
+padding-bottom: 16px;
+}
+
+#header-bottom-left ul.tabmenu li a:hover {
+color:#fff000;
+}
+
+#header-bottom-left ul.tabmenu li.selected a{
+color:#fff000;
+}
+
+/* res nightmode fixes */
+
+.res.res-nightmode .side .titlebox,
+.res.res-nightmode .side .titlebox blockquote,
+.res.res-nightmode .side .titlebox p,
+.res.res-nightmode .side .titlebox ul,
+.res.res-nightmode .side .titlebox ol,
+.res.res-nightmode .side .sidecontentbox {
+background-color:transparent;
+}
+
+ .res .res-nightmode .side,
+ .res .res-nightmode .side .content,
+ .res-nightmode .flairselector,
+ .res-nightmode .linefield,
+ .res-nightmode .icon-menu a,
+ .res-nightmode .side .leavemoderator,
+ .res-nightmode .side .leavecontributor-button,
+ .res-nightmode .side .titlebox,
+ .res-nightmode .side .spacer .titlebox .redditname,
+ .res-nightmode .side .titlebox .flairtoggle,
+ .res-nightmode .side .usertext-body .md ol,
+ .res-nightmode .side .usertext-body .md ol ol,
+ .res-nightmode .side .usertext-body .md ol ol li,
+ .res-nightmode .side blockquote,
+ .res-nightmode .modactionlisting table *,
+ .res-nightmode .side .recommend-box .rec-item {
+background-color:transparent;
+}
+
+
+/* bl.reddit.com theme */
+
+body:lang(bl) #header-bottom-left ul.tabmenu {
+left:45px;
+}
+body:lang(bl) .side #moderation_tools .title h1{
+color:#fff;
+}
+
+body:lang(bl) .side .md {
+max-width:320px!important;
+}
+
+body:lang(bl),
+body:lang(bl) .side,
+body:lang(bl) #header,
+body:lang(bl) .md{
+background-color:transparent!important;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body:lang(bl) {
+background: url(%%bl-left-pillar%%) 0px 10px repeat-y, url(%%bl-tile%%);
+}
+
+body:lang(bl) .md p, 
+body:lang(bl) .md h1, 
+body:lang(bl) .md h2, 
+body:lang(bl) .md h3, 
+body:lang(bl) .md h4, 
+body:lang(bl) .md h5, 
+body:lang(bl) .md h6,
+body:lang(bl) .md strong,
+body:lang(bl) .md th,
+body:lang(bl) .md table,
+body:lang(bl) .md tr,
+body:lang(bl) .wiki-page .wiki-page-content .pagelisting,
+body:lang(bl) b,
+body:lang(bl) em,
+body:lang(bl) table.generic-table,
+body:lang(bl) .md ul,
+body:lang(bl) .md li,
+body:lang(bl) .md ol{
+color:#fff !important;
+}
+
+body:lang(bl) .side .md blockquote a,
+body:lang(bl) .side .md ul a{
+color:#90c040;
+}
+
+body:lang(bl) .content a,
+body:lang(bl) .content #siteTable div.thing ul.flat-list.buttons li span.newComments{
+color:#90c040 !important;
+}
+body:lang(bl) a:hover {
+text-decoration:underline;
+}
+
+/*============Content Styling============*/
+
+body:lang(bl) .content[role=main] {
+margin-top:45px;
+margin-left:50px;
+}
+
+body:lang(bl) .content #siteTable.linklisting{
+border: 2px solid #382418;
+background-color:#000;
+margin-right:10px;
+}
+body:lang(bl) .content #siteTable > div.thing > .thumbnail {
+max-width:70px;
+max-height:50px;
+}
+body:lang(bl) .content #siteTable > div.thing > .midcol{
+border-right: 1px solid #382418;
+height:62px;
+}
+
+body:lang(bl) .content #siteTable .entry a.title, 
+body:lang(bl) .content #siteTable div.thing p.tagline a.author{
+color:#90c040;
+}
+body:lang(bl) .content #siteTable .entry a.title:visited, body:lang(bl) .md a:visited, body:lang(bl) .comment .md p > a:visited{
+color:#74825e !important;
+}
+
+body:lang(bl) .content #siteTable .thing .entry{
+border-right:1px solid #382418;
+border-left:1px solid #382418;
+min-height:62px;
+padding-left:5px;
+}
+
+body:lang(bl) .content #siteTable .thing .entry .expando-button {
+background-color:transparent;
+}
+
+body:lang(bl) .content #siteTable .thing {
+margin-bottom:0px;
+border-top:1px solid #382418;
+}
+body:lang(bl) .content #siteTable div.thing span.domain a,
+body:lang(bl) .content #siteTable div.thing span.domain,
+body:lang(bl) .content #siteTable div.thing p.tagline, 
+body:lang(bl) .content #siteTable div.thing ul.flat-list.buttons li a,
+body:lang(bl) .content #siteTable div.thing ul.flat-list.buttons li span,
+body:lang(bl) #siteTable > div.thing.comment > div.entry > div.noncollapsed > ulflat-list.buttons li.first a{
+color:#d2d2d2 !important;
+}
+
+body:lang(bl) #siteTable > div.thing > div.entry > div.expando .usertext-body .md{
+border:none;
+border-radius:0px;
+}
+body:lang(bl) .usertext.border .usertext-body {
+background-color:transparent;
+}
+body:lang(bl) .content .commentarea .comment,
+body:lang(bl) .content .commentarea .comment .comment,
+body:lang(bl) .content .commentarea .comment .comment .comment,
+body:lang(bl) .content .commentarea .comment .comment .comment .comment,
+body:lang(bl) .content .commentarea .comment .comment .comment .comment .comment,
+body:lang(bl) .content .commentarea .comment .comment .comment .comment .comment .comment,
+body:lang(bl) .content .commentarea .comment .comment .comment .comment .comment .comment .comment,
+body:lang(bl) .content .commentarea .comment .comment .comment .comment .comment .comment .comment .comment,
+body:lang(bl) .content .commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+body:lang(bl) .content .commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+body:lang(bl) .content .commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+body:lang(bl) .content .commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+background: #261d14 !important;
+border-radius:0px !important;
+border:0px !important;
+}
+
+body:lang(bl).wiki-page .wiki-page-content .md.wiki {
+padding:5px;
+background-color: #261d14 !important;
+border:3px solid #5e4731!important;
+}
+
+body:lang(bl) div.thing.comment > div.child {
+border-left:0px !important;
+}
+body:lang(bl) body .content .commentarea .comment{
+border:1px solid #5e4731!important;
+}
+
+body:lang(bl) .siteTable> div.thing.comment{
+margin-bottom:10px;
+}
+body:lang(bl) .content .sitetable.nestedlisting {
+margin-right:10px;
+}
+body:lang(bl) .content .sitetable.listing {
+border-left:1px dotted #fff;
+margin-right:5px;
+}
+
+body:lang(bl) a[href*="twitter.com"].thumbnail img {
+    width:70px !important; 
+    padding:50px 70px 0px 0px !important;
+    height:50px !important;
+}
+
+body:lang(bl) a[href*="twitter.com"].thumbnail img[src*="thumbs"] {
+background-image:url(%%sprites%%) !important;
+background-position: 0 -903px;
+background-repeat:  no-repeat;
+width:0px!important; 
+height:0px!important; 
+}
+
+/*============Sidebar Styling============*/
+
+
+body:lang(bl) form#search input {
+background-color:#000;
+color:#90c040 !important;
+}
+
+body:lang(bl) div#searchexpando {
+background-color:#000;
+}
+
+
+body:lang(bl) .spacer {
+background-color:transparent;
+}
+
+body:lang(bl) .spacer .subtitle{
+color:#fff;
+}
+
+body:lang(bl) .thing .tagline .author.submitter {
+color: white !important;
+font-weight: bold;
+padding: 0 2px 0 2px;
+border-radius: 3px;
+background-color: #0055DF !important;
+}
+
+/*============Footer Styling============*/
+
+body:lang(bl) .footer.rounded {
+border-color:#382418;
+border-radius:0px;
+background-color:black;
+}
+body:lang(bl) .footer.rounded li a{
+color:#90c040;
+}
+/*============RES Styling============*/
+
+body:lang(bl) .usertext-edit .RESDialogSmall .md.RESDialogContents, 
+.md.RESDialogContent,
+body:lang(bl) .usertext-edit .RESDialogSmall.livePreview,
+body:lang(bl) .usertext-edit .RESDialogSmall > h3{
+background-color:black !important;
+color:white;
+}
+body:lang(bl) .link.last-clicked {
+border:none;
+}
+body:lang(bl) .res-commentBoxes .comment {
+border:0px;
+border-left: 1px solid #382418;;
+}
+
+body:lang(bl) .res-commentBoxes.res-commentBoxes-rounded .comment {
+border-radius:0px;
+}
+
+body:lang(bl) div.RES-keyNav-activeElement{
+border-right:3px solid #90c040 !important;
+}
+
+body:lang(bl) div.RES-keyNav-activeElement,
+body:lang(bl) div.commentarea div.RES-keyNav-activeElement .md,
+body:lang(bl) div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
+background-color: transparent !important; 
+}
+
+
+body:lang(bl) .content .infobar.welcome h1 {
+color:black!important;
+}
+
+
+body:lang(bl) .linkflair-pinned {
+background-color: #000!important;
+box-shadow: 0px 0px 11px #7A7;
+margin-right: 0px!important;
+}
+
+body:lang(bl) .linkflair-jagexofficial {
+background-color: #000!important;
+box-shadow: 0px 0px 11px #aaa877;
+margin-right: 0px!important;
+}
+
+body:lang(bl) .linkflair-clancup {
+background-color: #000!important;
+box-shadow: 0px 0px 11px #aa7777;
+margin-right: 0px !important;
+}
+
+body:lang(bl) .linkflair-eventmod {
+background-color: #000!important;
+box-shadow: 0px 0px 11px #777baa;
+margin-right: 0px !important;
+    }
+
+
+.side .spacer:first-of-type {
+margin-top:120px;
+}
+
+.side blockquote blockquote blockquote a[href="http://bit.ly/1I6S6cD#su"] {
+background-image:url(%%submits%%);
+background-position:-821px 0px;
+background-repeat:no-repeat;
+width:283px;
+height:30px;
+display:block;
+margin:0 auto;
+text-indent:-9999px;
+}
+.side blockquote blockquote blockquote a[href="http://bit.ly/1I6S6cD#su"]:hover {
+background-position:-821px -30px;
+}
+
+.side blockquote blockquote blockquote a[href*="/r/2007scape/submit?title=%5BDMM%5D"] {
+background-image:url(%%submits%%);
+background-position:-820px -60px;
+background-repeat:no-repeat;
+width:283px;
+height:30px;
+display:block;
+margin:0 auto;
+text-indent:-9999px;
+margin-bottom:5px;
+}
+.side blockquote blockquote blockquote a[href*="/r/2007scape/submit?title=%5BDMM%5D"]:hover {
+background-position:-820px -90px;
+}
+
+.side blockquote blockquote blockquote a[href*="r/2007scape/submit#su"],
+.side blockquote blockquote blockquote a[href*="r/2007scape/submit?selftext=true#su"] {
+margin-bottom:5px;
+display: inline-block;
+text-align: center;
+position: relative;
+border: 0px solid transparent;
+background: transparent;
+background-image: url(%%submits%%);
+background-repeat: repeat;
+font-size: initial;
+font-weight: bold;
+letter-spacing: 0px;
+line-height: 30px;
+height: 30px;
+width:140px;
+text-indent:-9999px;
+}
+
+.side blockquote blockquote blockquote,
+.side blockquote blockquote  {
+margin:0px;
+padding:0px !important;
+}
+
+.side blockquote blockquote blockquote {
+width:290px;
+margin-left:-13px;
+position:absolute;
+top:233px;
+
+}
+
+.side blockquote blockquote blockquote a[href*="r/2007scape/submit?selftext=true#su"] {
+background-position: -140px 0px;
+margin-left:0px;
+}
+.side blockquote blockquote blockquote a[href*="r/2007scape/submit?selftext=true#su"]:hover {
+background-position: -140px -30px;
+}
+
+.side blockquote blockquote blockquote a[href*="r/2007scape/submit#su"] {
+background-position: 0px 0px;
+margin-left:4px;
+}
+
+.side blockquote blockquote blockquote a[href*="r/2007scape/submit#su"]:hover {
+background-position: 0px -30px;
+}
+
+
+
+
+
+.res #header-bottom-right.res-navTop {
+top:0px;
+padding:0px;
+z-index:10;
+}
+
+body:not(.res) #header-bottom-right {
+bottom:initial;
+top:0px;
+padding-bottom:0px;
+}
+
+#sr-header-area{
+text-transform:lowercase;
+font-size:10px;
+border:0;
+}
+
+
+.sr-list{
+margin-right:60px
+}
+
+.width-clip{
+margin-right: 380px;
+}
+
+
+.footer-parent{
+background-image:url(%%bl-tile-side%%), url(%%top-border%%), url(%%bl-tile%%); 
+background-repeat:no-repeat, repeat-x, repeat;
+background-position:100% -340px, top center, 0px 0px;
+}
+
+body:lang(bl) .footer-parent {
+background-image:none;
+}
+
+body:lang(bl) #header-bottom-left ul.tabmenu {
+padding-left:0px;
+width:auto;
+}
+
+p.debuginfo, 
+img#hsts_pixel {
+display:none;
+}
+
+/* temp */
+
+.side {
+margin-top:41px;
+}
+
+
+@media (max-width:1070px) {
+.side {
+margin-top:88px !important;
+}
+.side blockquote blockquote blockquote {
+top:275px;
+}
+}
+.content[role="main"] {
+margin-right:386px;
+margin-top:45px;
+}
+
+
+/* Merging old stylesheet */
+
+a[href="#s"] {
+    display: inline-block;
+    background: lightgrey !important;
+    color: black !important;
+    cursor: text;
+}
+a[href="#s"]::after {
+    content: attr(title);
+    background: black !important;
+    color: black !important;
+    visibility: visible;
+    border-radius: 3px;
+    padding: 0 3px;
+    margin-left: 5px;
+}
+a[href="#s"]:hover::after, a[href="#s"]:active::after {
+    color: white !important;
+}
+
+.stamp acronym::after{content:"/SPOILER"}
+
+.res-nightmode .linkflairlabel {
+background-color:transparent!important;
+}
+
+span[title*="120 minutes"]{
+display:none
+}
+
+.post-linkflair-qa .commentarea > .sitetable > .thing > .child:empty::after {
+content:"no replies yet!";
+position:relative;
+bottom:10px;
+left:0.65em;
+font-weight:bold;
+color:red;
+}
+
+.linkflair-qa .title{
+text-shadow:0 0 20px;
+}
+
+/* fix for tables not wrapping on smaller resolutions, feel free to improve or remove if there are any issues */
+
+
+.md table {
+  table-layout: fixed;
+  width: 100%
+}
+
+
+/* Stupid admin css fixes */ 
+
+.res #progressIndicator { 
+width: auto; 
+}
+
+.linkflairlabel {
+max-width:9999px !important;
+}
+
+.titlebox .usertext {
+line-height: 120% !important;
+font-size: small !important;
+}
+
+
+body.submit-page .roundfield#text-field textarea {
+min-height:500px;
+}
+
+
+
+a[href="#gnomechild"] {
+background:url(%%gnomechildbgsmall%%);
+background-repeat:no-repeat;
+background-position: 0px 0px;
+font-size:14px;
+font-family:Georgia;
+font-weight:lighter;
+color:black !important;
+padding-left:50px;
+padding-top:40px;
+padding-right:5px;
+padding-bottom:35px;
+overflow:hidden;
+width:445px;
+max-height:63px;
+height:63px;
+max-width:500px;
+display:inline-block;
+text-align:center;
+text-overflow: ellipsis;
+}
+
+a[href="#gnomechild"]:before{
+position:relative;
+background:url(%%gnomesheetsmall%%);
+background-repeat:no-repeat;
+background-position: 0px 0px;
+width:73px;
+height:97px;
+display:block;
+float:left;
+top:-23px;
+left:-15px;
+text-indent:-9999px;
+content:"";
+-webkit-animation: gnome steps(25) 10s infinite;
+-moz-animation: gnome steps(25) 10s infinite;
+-o-animation: gnome steps(25) 10s infinite;
+}
+
+@-webkit-keyframes gnome {
+from { background-position: 0px 0px;}
+to{background-position: -1860px 0px;}
+}
+@-moz-keyframes gnome {
+from { background-position: 0px 0px;}
+to{background-position: -1860px 0px;}
+}
+@-o-keyframes gnome {
+from { background-position: 0px 0px;}
+to{background-position: -1860px 0px;}
+}
+
+
+a[href="#ghost"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background:url(%%gnomechildbgsmall%%);
+  background-repeat: no-repeat;
+  background-position: 0px -163px;
+  font-size: 14px;
+  font-family: Georgia;
+  font-weight: lighter;
+  color: #000!important;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  overflow: hidden;
+  width: 520px;
+  max-height: 142px;
+  height: 142px;
+  max-width: 520px;
+  display: inline-block;
+  text-align: center;
+  text-overflow: ellipsis;
+  padding-top: 40px;
+  padding-left: 13px;
+  padding-right: 137px;
+}
+
+a[href="#ghost"]:before{
+
+  position: relative;
+  background: url(%%gnomesheetsmall%%);
+  background-repeat: no-repeat;
+  background-position: 0px -97px;
+  width: 109px;
+  margin-left: -65px;
+  height: 104px;
+  display: block;
+  float: left;
+  top: -15px;
+  left: 446px;
+  text-indent: -9999px;
+  content: "";
+
+-webkit-animation: ghost steps(17) 10s infinite;
+-moz-animation: ghost steps(17) 10s infinite;
+-o-animation: ghost steps(17) 10s infinite;
+}
+
+
+.md.RESDialogContents a[href="#ghost"]:after {
+top:-179px;
+}
+
+@-webkit-keyframes ghost {
+from { background-position: 0px -97px;}
+to{background-position: 0px -1865px;}
+}
+@-moz-keyframes ghost {
+from { background-position: 0px -97px;}
+to{background-position: 0px -1865px;}
+}
+@-o-keyframes ghost {
+from { background-position: 0px -97px;}
+to{background-position: 0px -1865px;}
+}
+
+a[href="/kebab"]:after, 
+a[href="#kebab"]:after {
+background-image:url(%%new-spritesheet%%);
+background-position: -152px -182px;
+width: 27px;
+height: 23px;
+display: inline-block;
+content: " ";
+}
+
+
+/** Displaying a tickbox on the official runescape forums/other legitimate sites **/
+
+a[href^="oldschool.runescape.com"]:nth-of-type(n):after, 
+a[href^="http://oldschool.runescape.com/"]:nth-of-type(n):after, 
+a[href^="services.runescape.com/"]:nth-of-type(n):after, 
+a[href^="http://services.runescape.com/"]:nth-of-type(n):after, 
+a[href^="forum.runescape.com/"]:nth-of-type(n):after, 
+a[href^="http://forum.runescape.com/"]:nth-of-type(n):after{
+background-image: url(%%flairsheet%%);
+background-position: -292px -77px; 
+width:15px;
+height:12px;
+display:inline-block;
+margin-left:10px;
+content:'';
+}
+
+a[href^="oldschool.runescape.com"].thumbnail.loggedin:after, 
+a[href^="http://oldschool.runescape.com/"].thumbnail.loggedin:after, 
+a[href^="services.runescape.com/"].thumbnail.loggedin:after, 
+a[href^="http://services.runescape.com/"].thumbnail.loggedin:after, 
+a[href^="forum.runescape.com/"].thumbnail.loggedin:after, 
+a[href^="http://forum.runescape.com/"].thumbnail.loggedin:after{
+display:none;
+}
+
+.side a[href*="reddit.com/user/Twitchy_The_Bot"],
+.side a[href*="reddit.com/user/gameblast_stream_bot"],
+.side .sidecontentbox a[href*="reddit.com/user/AutoModerator"] {
+display:none !important;
+}
+
+
+.commentarea .arrow.down:hover:before {
+position: fixed;
+display: block;
+z-index: 1000;
+padding: 5px 0;
+border-top: 1px solid #333;
+content: "Please only downvote comments that are against the rules or irrelevant to the discussion.";
+text-align: center;
+bottom: 0;
+width: 100%;
+left: 0;
+background-color: #94826b;
+color: #FEFEFE;
+text-shadow: 0 -1px 1px #555;
+font-size: 16px;
+}
+
+
+.sidecontentbox .content li span.RESUserTag a.userTagLink.RESUserTagImage {
+display:none;
+}
+
+/**======================================================== Sidebar Styling ========================================================**/
+
+
+
+
+
+/*** extra shit ***/
+
+.linkflair-pinned {
+background-color: #F0FDF0 !important;/*#CFC*/
+box-shadow: 0 0px 5px #7A7;
+}
+
+.linkflair-pinned .entry > .title > .linkflairlabel {
+display: none;
+}
+
+
+.linkflair-jagexofficial {
+background-color: #fdfdde !important;
+box-shadow: 0 0px 5px #aaa877;
+}
+
+.linkflair-clancup {
+background-color: #ff8d8d !important;
+box-shadow: 0 0px 5px #aa7777;
+}
+
+.linkflair-eventmod {
+background-color: #f0f0fd!important;
+box-shadow: 0 0px 5px #777baa;
+}
+
+
+.flairselector.drop-choices.active .flairoptionpane ul .linkflair.linkflair-Pinned a.title {
+background-color: #F0FDF0 !important;
+box-shadow: 0 0px 5px #7A7;
+}
+
+.flairselector.drop-choices.active .flairoptionpane ul .linkflair.linkflair-clancup a.title {
+background-color: #ff8d8d !important;
+box-shadow: 0 0px 5px #aa7777;
+}
+
+.flairselector.drop-choices.active .flairoptionpane ul .linkflair.linkflair-jagexofficial a.title {
+background-color: #fdfdde !important;
+box-shadow: 0 0px 5px #aaa877;
+}
+.flairselector.drop-choices.active .flairoptionpane ul .linkflair.linkflair-eventmod a.title {
+background-color: #f0f0fd !important;
+box-shadow: 0 0px 5px #777baa;
+}
+
+a[href*="twitter.com"].thumbnail img {
+width:70px !important; 
+padding:50px 70px 0px 0px !important;
+height:50px !important;
+}
+
+a[href*="twitter.com"].thumbnail img[src*="thumbs"] {
+background-image:url(%%sprites%%) !important;
+background-position: 0 -973px;
+background-repeat:  no-repeat;
+width:0px !important; 
+height:0px !important; 
+}
+
+.linkflair-jagexofficial .thumbnail img,
+.linkflair-official .thumbnail img,
+.linkflair-eventmod .thumbnail img,
+.linkflair-pinned .thumbnail img {
+display:none;
+}
+
+.linkflair-official .thumbnail {
+background-image:url(%%sprites%%);
+background-position: 0 -605px;
+width: 70px;
+height: 50px;
+}
+
+.linkflair-jagexofficial .thumbnail {
+background-image:url(%%sprites%%);
+background-position: 0 -750px;
+width: 70px;
+height: 58px;
+}
+
+.linkflair-pinned .thumbnail {
+background-image:url(%%sprites%%);
+background-position: 0 -828px;
+width: 70px;
+height: 55px; 
+}
+
+.linkflair-eventmod .thumbnail {
+background-image:url(%%sprites%%);
+background-position: 0 -675px;
+width: 70px;
+height: 55px;
+} 
+
+
+.flairselector.drop-choices.active .flairoptionpane ul .linkflair.linkflair-official a.title {
+color:brown !important;
+}
+
+.flairselector.drop-choices.active .flairoptionpane ul .linkflair.linkflair-eventmod a.title {
+color:black !important;
+}
+
+
+.comment .arrow.down {
+background-image:url(%%sprites%%) !important;;
+background-position: 0 -530px;
+width: 9px;
+margin-left: 3px;
+height: 10px;
+}
+
+.comment .arrow.downmod {
+background-image:url(%%sprites%%) !important;
+padding-right: 5px !important;
+background-position: 0 -502px;
+width: 9px;
+margin-left: 3px;
+height: 10px;
+}
+
+.comment .arrow.down:hover::after, 
+.comment .arrow.downmod:hover::after {
+position: absolute;
+display: block;
+z-index: 1000;
+width: 200px;
+padding: 5px;
+border: 1px solid #a70000;
+background-color: #fff;
+color: #555555;
+content: "Help keep 2007scape a friendly, content rich community; only downvote posts that lack effort and/or relevance.  Avoid downvoting posts simply because you disagree";
+text-align: center;
+font-size: 10px;
+font-weight: normal;
+margin-left: 2px;
+margin-top: 22px;
+box-shadow: 1px 1px 3px #eee;
+}
+
+
+/*heavy breathing*/
+
+.usertext-body .md a[href="#mlady"] {
+background-image:url(%%new-spritesheet%%);
+background-position:-280px -255px;
+background-repeat:no-repeat;
+width:166px;
+height:155px;
+font-size:0px;
+display:block;
+cursor:default;
+-webkit-animation: shake 0.5s infinite ease;
+-moz-animation: shake 0.5s infinite ease;
+-o-animation: shake 0.5s infinite ease;
+}
+
+.usertext-body .md a[href="#heavybreathing"] {
+background-image:url(%%new-spritesheet%%);
+background-position:-279px -421px;
+background-repeat:no-repeat;
+width:166px;
+height:120px;
+font-size:0px;
+display:block;
+cursor:default;
+-webkit-animation: shake 0.1s infinite ease;
+-moz-animation: shake 0.1s infinite ease;
+-o-animation: shake 0.1s infinite ease;
+}
+
+@keyframes shake{
+0% {transform:translateX(-5px); text-indent:5px; }
+100% {transform:translateX(5px);  text-indent:-5px; }
+}
+
+@-webkit-keyframes shake{
+0% { -webkit-transform:translateX(-5px); text-indent:5px; }
+100% { -webkit-transform:translateX(5px);  text-indent:-5px; }
+}
+
+@-moz-keyframes shake{
+0% { -moz-transform:translateX(-5px); text-indent:5px; }
+100% { -moz-transform:translateX(5px);  text-indent:-5px; }
+}
+
+@-o-keyframes shake{
+0% { -o-transform:translateX(-5px); text-indent:5px; }
+100% { -o-transform:translateX(5px);  text-indent:-5px; }
+}
+
+.usertext-body .md a[href="#heavybreathing"]:after {
+content: "[Breathing intensifies]";
+display:block;
+width:166px;
+height:20px;
+color:black;
+font-size:12px;
+font-weight:bold;
+padding-left:5px;
+padding-top:100px;
+}
+
+.usertext-body .md a[href="#mlady"]:after {
+content: "[m'ladying intensifies]";
+display:block;
+width:166px;
+height:20px;
+color:black;
+font-size:12px;
+font-weight:bold;
+padding-left:5px;
+padding-top:135px;
+}
+
+/*upvote animation*/
+
+/* XP RATES: 
+
+
+1xp abcdefghiv16 12/35
+
+10xp jklmnow27 9/35
+
+100xp pqrx38 6/35
+
+1000xp stu49 5/35
+
+10000xp zy5 3/35
+
+*/
+
+.content .midcol,.content .commentarea .comment {overflow:visible !important;}
+
+/***1xp drop***/
+
+.arrow.upmod:after, .thing[data-fullname$="a"] .arrow.upmod:after, .thing[data-fullname$="b"] .arrow.upmod:after, .thing[data-fullname$="c"] .arrow.upmod:after, .thing[data-fullname$="d"] .arrow.upmod:after, .thing[data-fullname$="e"] .arrow.upmod:after, .thing[data-fullname$="f"] .arrow.upmod:after, .thing[data-fullname$="g"] .arrow.upmod:after, .thing[data-fullname$="h"] .arrow.upmod:after, .thing[data-fullname$="i"] .arrow.upmod:after, .thing[data-fullname$="v"] .arrow.upmod:after, .thing[data-fullname$="1"] .arrow.upmod:after, .thing[data-fullname$="6"] .arrow.upmod:after{
+background-image:url(%%xpupvote%%);
+width:29px;
+display:block;
+height:9px;
+content:" ";
+background-position:0px 0px;
+position:relative;
+left:-7px;
+animation: XpAnimation_1xp ease 0.5s;
+animation-iteration-count: 1;
+-webkit-animation: XpAnimation_1xp ease 0.5s;
+-webkit-animation-iteration-count: 1;
+-moz-animation: XpAnimation_1xp ease 0.5s;
+-moz-animation-iteration-count: 1;
+-o-animation: XpAnimation_1xp ease 0.5s;
+-o-animation-iteration-count: 1;
+-ms-animation: XpAnimation_1xp ease 0.5s;
+-ms-animation-iteration-count: 1;
+}
+
+@-webkit-keyframes XpAnimation_1xp{
+  0% {background-position:0px 0px;}
+  6% {-webkit-transform:translate(0px,-1px); background-position:0px -16px;}
+  78% {-webkit-transform:translate(0px,-12px); opacity:0.8; background-position:0px -16px;}
+  84% {-webkit-transform:translate(0px,-13px); opacity:0.6; background-position:0px -16px;}
+  90% {-webkit-transform:translate(0px,-14px); opacity:0.4; background-position:0px -16px;}
+  96% {-webkit-transform:translate(0px,-15px); opacity:0.2; background-position:0px -16px;}
+  100% {-webkit-transform:translate(0px,-16px); opacity:0; background-position:0px 0px;}
+}
+
+
+@keyframes XpAnimation_1xp{
+  0% {background-position:0px 0px;}
+  6% {transform:translate(0px,-1px); background-position:0px -16px;}
+  78% {transform:translate(0px,-12px); opacity:0.8; background-position:0px -16px;}
+  84% {transform:translate(0px,-13px); opacity:0.6; background-position:0px -16px;}
+  90% {transform:translate(0px,-14px); opacity:0.4; background-position:0px -16px;}
+  96% {transform:translate(0px,-15px); opacity:0.2; background-position:0px -16px;}
+  100% {transform:translate(0px,-16px); opacity:0; background-position:0px 0px;}
+}
+
+@-moz-keyframes XpAnimation_1xp{
+  0% {background-position:0px 0px;}
+  6% {-moz-transform:translate(0px,-1px); background-position:0px -16px;}
+  78% {-moz-transform:translate(0px,-12px); opacity:0.8; background-position:0px -16px;}
+  84% {-moz-transform:translate(0px,-13px); opacity:0.6; background-position:0px -16px;}
+  90% {-moz-transform:translate(0px,-14px); opacity:0.4; background-position:0px -16px;}
+  96% {-moz-transform:translate(0px,-15px); opacity:0.2; background-position:0px -16px;}
+  100% {-moz-transform:translate(0px,-16px); opacity:0; background-position:0px 0px;}
+}
+
+@-o-keyframes XpAnimation_1xp{
+  0% {background-position:0px 0px;}
+  6% {-o-transform:translate(0px,-1px); background-position:0px -16px;}
+  78% {-o-transform:translate(0px,-12px); opacity:0.8; background-position:0px -16px;}
+  84% {-o-transform:translate(0px,-13px); opacity:0.6; background-position:0px -16px;}
+  90% {-o-transform:translate(0px,-14px); opacity:0.4; background-position:0px -16px;}
+  96% {-o-transform:translate(0px,-15px); opacity:0.2; background-position:0px -16px;}
+  100% {-o-transform:translate(0px,-16px); opacity:0; background-position:0px 0px;}
+}
+
+/***10 xp drop****/
+
+
+.thing[data-fullname$="j"] .arrow.upmod:after, .thing[data-fullname$="k"] .arrow.upmod:after, .thing[data-fullname$="l"] .arrow.upmod:after, .thing[data-fullname$="m"] .arrow.upmod:after,.thing[data-fullname$="n"] .arrow.upmod:after, .thing[data-fullname$="o"] .arrow.upmod:after, .thing[data-fullname$="w"] .arrow.upmod:after, .thing[data-fullname$="2"] .arrow.upmod:after, .thing[data-fullname$="7"] .arrow.upmod:after{
+background-image:url(%%xpupvote%%);
+width:0px;
+display:block;
+height:9px;
+content:" ";
+background-position:-156px -16px;
+position:relative;
+left:-10px;
+  animation: XpAnimation_10xp ease 0.5s;
+  animation-iteration-count: 1;
+  -webkit-animation: XpAnimation_10xp ease 0.5s;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation: XpAnimation_10xp ease 0.5s;
+  -moz-animation-iteration-count: 1;
+  -o-animation: XpAnimation_10xp ease 0.5s;
+  -o-animation-iteration-count: 1;
+  -ms-animation: XpAnimation_10xp ease 0.5s;
+  -ms-animation-iteration-count: 1;
+}
+
+@-webkit-keyframes XpAnimation_10xp{
+  0% {width:32px; background-position:0px 0px;}
+  6% {width:32px;-webkit-transform:translate(0px,-1px); background-position:-31px -16px;}
+  78% {width:32px;-webkit-transform:translate(0px,-12px); opacity:0.8; background-position:-31px -16px;}
+  84% {width:32px;-webkit-transform:translate(0px,-13px); opacity:0.6; background-position:-31px -16px;}
+  90% {width:32px;-webkit-transform:translate(0px,-14px); opacity:0.4; background-position:-31px -16px;}
+  96% {width:32px;-webkit-transform:translate(0px,-15px); opacity:0.2; background-position:-31px -16px;}
+  100% {width:32px;-webkit-transform:translate(0px,-16px); opacity:0; background-position:0px 0px;}
+}
+
+
+@keyframes XpAnimation_10xp{
+  0% {background-position:0px 0px;}
+  6% {width:32px;transform:translate(0px,-1px); background-position:-31px -16px;}
+  78% {width:32px;transform:translate(0px,-12px); opacity:0.8; background-position:-31px -16px;}
+  84% {width:32px;transform:translate(0px,-13px); opacity:0.6; background-position:-31px -16px;}
+  90% {width:32px;transform:translate(0px,-14px); opacity:0.4; background-position:-31px -16px;}
+  96% {width:32px;transform:translate(0px,-15px); opacity:0.2; background-position:-31px -16px;}
+  100% {width:32px;transform:translate(0px,-16px); opacity:0; background-position:0px 0px;}
+}
+
+@-moz-keyframes XpAnimation_10xp{
+  0% {background-position:0px 0px;}
+  6% {width:32px;-moz-transform:translate(0px,-1px); background-position:-31px -16px;}
+  78% {width:32px;-moz-transform:translate(0px,-12px); opacity:0.8; background-position:-31px -16px;}
+  84% {width:32px;-moz-transform:translate(0px,-13px); opacity:0.6; background-position:-31px -16px;}
+  90% {width:32px;-moz-transform:translate(0px,-14px); opacity:0.4; background-position:-31px -16px;}
+  96% {width:32px;-moz-transform:translate(0px,-15px); opacity:0.2; background-position:-31px -16px;}
+  100% {width:32px;-moz-transform:translate(0px,-16px); opacity:0; background-position:0px 0px;}
+}
+
+@-o-keyframes XpAnimation_10xp{
+  0% {background-position:0px 0px;}
+  6% {width:32px;-o-transform:translate(0px,-1px); background-position:-31px -16px;}
+  78% {width:32px;-o-transform:translate(0px,-12px); opacity:0.8; background-position:-31px -16px;}
+  84% {width:32px;-o-transform:translate(0px,-13px); opacity:0.6; background-position:-31px -16px;}
+  90% {width:32px;-o-transform:translate(0px,-14px); opacity:0.4; background-position:-31px -16px;}
+  96% {width:32px;-o-transform:translate(0px,-15px); opacity:0.2; background-position:-31px -16px;}
+  100% {width:32px;-o-transform:translate(0px,-16px); opacity:0; background-position:0px 0px;}
+}
+
+/***100 xp drop****/
+
+
+.thing[data-fullname$="p"] .arrow.upmod:after, .thing[data-fullname$="q"] .arrow.upmod:after, .thing[data-fullname$="r"] .arrow.upmod:after, .thing[data-fullname$="x"] .arrow.upmod:after,.thing[data-fullname$="3"] .arrow.upmod:after, .thing[data-fullname$="8"] .arrow.upmod:after{
+background-image:url(%%xpupvote%%);
+width:0px;
+display:block;
+height:9px;
+content:" ";
+background-position:-70px -16px;
+position:relative;
+left:-14px;
+  animation: XpAnimation_100xp ease 0.5s;
+  animation-iteration-count: 1;
+  -webkit-animation: XpAnimation_100xp ease 0.5s;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation: XpAnimation_100xp ease 0.5s;
+  -moz-animation-iteration-count: 1;
+  -o-animation: XpAnimation_100xp ease 0.5s;
+  -o-animation-iteration-count: 1;
+  -ms-animation: XpAnimation_100xp ease 0.5s;
+  -ms-animation-iteration-count: 1;
+}
+
+
+@-webkit-keyframes XpAnimation_100xp{
+  0% {width:38px; background-position:0px 0px;}
+  6% {width:38px;-webkit-transform:translate(0px,-1px); background-position:-70px -16px;}
+  78% {width:38px;-webkit-transform:translate(0px,-12px); opacity:0.8; background-position:-70px -16px;}
+  84% {width:38px;-webkit-transform:translate(0px,-13px); opacity:0.6; background-position:-70px -16px;}
+  90% {width:38px;-webkit-transform:translate(0px,-14px); opacity:0.4; background-position:-70px -16px;}
+  96% {width:38px;-webkit-transform:translate(0px,-15px); opacity:0.2; background-position:-70px -16px;}
+  100% {width:38px;-webkit-transform:translate(0px,-16px); opacity:0; background-position:0px 0px;}
+}
+
+
+@keyframes XpAnimation_100xp{
+  0% {background-position:0px 0px;}
+  6% {width:38px;transform:translate(0px,-1px); background-position:-70px -16px;}
+  78% {width:38px;transform:translate(0px,-12px); opacity:0.8; background-position:-70px -16px;}
+  84% {width:38px;transform:translate(0px,-13px); opacity:0.6; background-position:-70px -16px;}
+  90% {width:38px;transform:translate(0px,-14px); opacity:0.4; background-position:-70px -16px;}
+  96% {width:38px;transform:translate(0px,-15px); opacity:0.2; background-position:-70px -16px;}
+  100% {width:38px;transform:translate(0px,-16px); opacity:0; background-position:0px 0px;}
+}
+
+@-moz-keyframes XpAnimation_100xp{
+  0% {background-position:0px 0px;}
+  6% {width:38px;-moz-transform:translate(0px,-1px); background-position:-70px -16px;}
+  78% {width:38px;-moz-transform:translate(0px,-12px); opacity:0.8; background-position:-70px -16px;}
+  84% {width:38px;-moz-transform:translate(0px,-13px); opacity:0.6; background-position:-70px -16px;}
+  90% {width:38px;-moz-transform:translate(0px,-14px); opacity:0.4; background-position:-70px -16px;}
+  96% {width:38px;-moz-transform:translate(0px,-15px); opacity:0.2; background-position:-70px -16px;}
+  100% {width:38px;-moz-transform:translate(0px,-16px); opacity:0; background-position:0px 0px;}
+}
+
+@-o-keyframes XpAnimation_100xp{
+  0% {background-position:0px 0px;}
+  6% {width:38px;-o-transform:translate(0px,-1px); background-position:-70px -16px;}
+  78% {width:38px;-o-transform:translate(0px,-12px); opacity:0.8; background-position:-70px -16px;}
+  84% {width:38px;-o-transform:translate(0px,-13px); opacity:0.6; background-position:-70px -16px;}
+  90% {width:38px;-o-transform:translate(0px,-14px); opacity:0.4; background-position:-70px -16px;}
+  96% {width:38px;-o-transform:translate(0px,-15px); opacity:0.2; background-position:-70px -16px;}
+  100% {width:38px;-o-transform:translate(0px,-16px); opacity:0; background-position:0px 0px;}
+}
+
+/***1000 xp drop****/
+
+
+.thing[data-fullname$="s"] .arrow.upmod:after, .thing[data-fullname$="t"] .arrow.upmod:after, .thing[data-fullname$="u"] .arrow.upmod:after, .thing[data-fullname$="4"] .arrow.upmod:after,.thing[data-fullname$="9"] .arrow.upmod:after{
+background-image:url(%%xpupvote%%);
+width:0px;
+display:block;
+height:9px;
+content:" ";
+ background-position:-110px -16px;
+position:relative;
+left:-14px;
+  animation: XpAnimation_1000xp ease 0.5s;
+  animation-iteration-count: 1;
+  -webkit-animation: XpAnimation_1000xp ease 0.5s;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation: XpAnimation_1000xp ease 0.5s;
+  -moz-animation-iteration-count: 1;
+  -o-animation: XpAnimation_1000xp ease 0.5s;
+  -o-animation-iteration-count: 1;
+  -ms-animation: XpAnimation_1000xp ease 0.5s;
+  -ms-animation-iteration-count: 1;
+}
+
+
+
+@-webkit-keyframes XpAnimation_1000xp{
+  0% {width:44px; background-position:0px 0px;}
+  6% {width:44px;-webkit-transform:translate(0px,-1px); background-position:-110px -16px;}
+  78% {width:44px;-webkit-transform:translate(0px,-12px); opacity:0.8; background-position:-110px -16px;}
+  84% {width:44px;-webkit-transform:translate(0px,-13px); opacity:0.6; background-position:-110px -16px;}
+  90% {width:44px;-webkit-transform:translate(0px,-14px); opacity:0.4; background-position:-110px -16px;}
+  96% {width:44px;-webkit-transform:translate(0px,-15px); opacity:0.2; background-position:-110px -16px;}
+  100% {width:44px;-webkit-transform:translate(0px,-16px); opacity:0; background-position:0px 0px;}
+}
+
+
+@keyframes XpAnimation_1000xp{
+  0% {background-position:0px 0px;}
+  6% {width:44px;transform:translate(0px,-1px); background-position:-110px -16px;}
+  78% {width:44px;transform:translate(0px,-12px); opacity:0.8; background-position:-110px -16px;}
+  84% {width:44px;transform:translate(0px,-13px); opacity:0.6; background-position:-110px -16px;}
+  90% {width:44px;transform:translate(0px,-14px); opacity:0.4; background-position:-110px -16px;}
+  96% {width:44px;transform:translate(0px,-15px); opacity:0.2; background-position:-110px -16px;}
+  100% {width:44px;transform:translate(0px,-16px); opacity:0; background-position:0px 0px;}
+}
+
+@-moz-keyframes XpAnimation_1000xp{
+  0% {background-position:0px 0px;}
+  6% {width:44px;-moz-transform:translate(0px,-1px); background-position:-110px -16px;}
+  78% {width:44px;-moz-transform:translate(0px,-12px); opacity:0.8; background-position:-110px -16px;}
+  84% {width:44px;-moz-transform:translate(0px,-13px); opacity:0.6; background-position:-110px -16px;}
+  90% {width:44px;-moz-transform:translate(0px,-14px); opacity:0.4; background-position:-110px -16px;}
+  96% {width:44px;-moz-transform:translate(0px,-15px); opacity:0.2; background-position:-110px -16px;}
+  100% {width:44px;-moz-transform:translate(0px,-16px); opacity:0; background-position:0px 0px;}
+}
+
+@-o-keyframes XpAnimation_1000xp{
+  0% {background-position:0px 0px;}
+  6% {width:44px;-o-transform:translate(0px,-1px); background-position:-110px -16px;}
+  78% {width:44px;-o-transform:translate(0px,-12px); opacity:0.8; background-position:-110px -16px;}
+  84% {width:44px;-o-transform:translate(0px,-13px); opacity:0.6; background-position:-110px -16px;}
+  90% {width:44px;-o-transform:translate(0px,-14px); opacity:0.4; background-position:-110px -16px;}
+  96% {width:44px;-o-transform:translate(0px,-15px); opacity:0.2; background-position:-110px -16px;}
+  100% {width:44px;-o-transform:translate(0px,-16px); opacity:0; background-position:0px 0px;}
+}
+
+
+/***10,000 xp drop****/
+
+
+.thing[data-fullname$="z"] .arrow.upmod:after, .thing[data-fullname$="y"] .arrow.upmod:after, .thing[data-fullname$="5"] .arrow.upmod:after, .thing[data-fullname$="t3_26652r"] .arrow.upmod:after{
+background-image:url(%%xpupvote%%);
+width:0px;
+display:block;
+height:9px;
+content:" ";
+background-position:-156px -16px;
+position:relative;
+left:-14px;
+  animation: XpAnimation_10000xp ease 0.5s;
+  animation-iteration-count: 1;
+  -webkit-animation: XpAnimation_10000xp ease 0.5s;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation: XpAnimation_10000xp ease 0.5s;
+  -moz-animation-iteration-count: 1;
+  -o-animation: XpAnimation_10000xp ease 0.5s;
+  -o-animation-iteration-count: 1;
+  -ms-animation: XpAnimation_10000xp ease 0.5s;
+  -ms-animation-iteration-count: 1;
+}
+@-webkit-keyframes XpAnimation_10000xp{
+  0% {width:52px; background-position:0px 0px;}
+  6% {width:52px;-webkit-transform:translate(0px,-1px); background-position:-156px -16px;}
+  78% {width:52px;-webkit-transform:translate(0px,-12px); opacity:0.8; background-position:-156px -16px;}
+  84% {width:52px;-webkit-transform:translate(0px,-13px); opacity:0.6; background-position:-156px -16px;}
+  90% {width:52px;-webkit-transform:translate(0px,-14px); opacity:0.4; background-position:-156px -16px;}
+  96% {width:52px;-webkit-transform:translate(0px,-15px); opacity:0.2; background-position:-156px -16px;}
+  100% {width:52px;-webkit-transform:translate(0px,-16px); opacity:0; background-position:0px 0px;}
+}
+
+@keyframes XpAnimation_10000xp{
+  0% {background-position:0px 0px;}
+  6% {width:52px;transform:translate(0px,-1px); background-position:-156px -16px;}
+  78% {width:52px;transform:translate(0px,-12px); opacity:0.8; background-position:-156px -16px;}
+  84% {width:52px;transform:translate(0px,-13px); opacity:0.6; background-position:-156px -16px;}
+  90% {width:52px;transform:translate(0px,-14px); opacity:0.4; background-position:-156px -16px;}
+  96% {width:52px;transform:translate(0px,-15px); opacity:0.2; background-position:-156px -16px;}
+  100% {width:52px;transform:translate(0px,-16px); opacity:0; background-position:0px 0px;}
+}
+
+@-moz-keyframes XpAnimation_10000xp{
+  0% {background-position:0px 0px;}
+  6% {width:52px;-moz-transform:translate(0px,-1px); background-position:-156px -16px;}
+  78% {width:52px;-moz-transform:translate(0px,-12px); opacity:0.8; background-position:-156px -16px;}
+  84% {width:52px;-moz-transform:translate(0px,-13px); opacity:0.6; background-position:-156px -16px;}
+  90% {width:52px;-moz-transform:translate(0px,-14px); opacity:0.4; background-position:-156px -16px;}
+  96% {width:52px;-moz-transform:translate(0px,-15px); opacity:0.2; background-position:-156px -16px;}
+  100% {width:52px;-moz-transform:translate(0px,-16px); opacity:0; background-position:0px 0px;}
+}
+
+@-o-keyframes XpAnimation_10000xp{
+  0% {background-position:0px 0px;}
+  6% {width:52px;-o-transform:translate(0px,-1px); background-position:-156px -16px;}
+  78% {width:52px;-o-transform:translate(0px,-12px); opacity:0.8; background-position:-156px -16px;}
+  84% {width:52px;-o-transform:translate(0px,-13px); opacity:0.6; background-position:-156px -16px;}
+  90% {width:52px;-o-transform:translate(0px,-14px); opacity:0.4; background-position:-156px -16px;}
+  96% {width:52px;-o-transform:translate(0px,-15px); opacity:0.2; background-position:-156px -16px;}
+  100% {width:52px;-o-transform:translate(0px,-16px); opacity:0; background-position:0px 0px;}
+}
+
+
+
+/********************* Skill icon flair by Cheesydude **********************/
+
+.flair {
+    visibility: visible;
+    text-indent: -9999px;
+    /* hide the flair text */
+    margin: 0px 3px 0px;
+    width: 22px;
+    height: 22px;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    background-repeat: no-repeat;
+    background-image: url(%%flairsheet%%);
+    background-position: 0px 0px;
+    vertical-align: middle;
+    border-width: 0;
+    padding: 0;
+    background-color: transparent
+    }
+
+.commentarea span.flair:hover, .link span.flair:hover {
+    visibility: visible;
+    width: auto;
+min-width:22px;
+    min-height: 22px;
+    line-height: 22px;
+    text-indent: 0;
+    background-image: none;
+    cursor: default;
+    background-color: whitesmoke;
+    color: black;
+    }
+
+.tagline .flair {font-size: 14px;}
+
+/*Skill icon flair (user flair templates need to be assigned in order for these to work.)*/
+/*DEFAULT FLAIRS*/
+span.flair-agility{ background-image: url(%%flairsheet%%); background-position: 0 0; width: 22px; height: 22px; }
+span.flair-attack{ background-image: url(%%flairsheet%%); background-position: -24px 0; width: 22px; height: 22px; }
+span.flair-construction{background-image: url(%%flairsheet%%); background-position:  -48px 0; width: 22px; height: 22px; }
+span.flair-cooking{ background-image: url(%%flairsheet%%); background-position: -72px 0; width: 22px; height: 22px; }
+span.flair-crafting{ background-image: url(%%flairsheet%%); background-position: -96px 0; width: 22px; height: 22px; }
+span.flair-defence{ background-image: url(%%flairsheet%%); background-position: -120px 0; width: 22px; height: 22px; }
+span.flair-farming{ background-image: url(%%flairsheet%%); background-position: -144px 0; width: 22px; height: 22px; }
+span.flair-firemaking{ background-image: url(%%flairsheet%%); background-position: -168px 0; width: 22px; height: 22px; }
+span.flair-fishing{ background-image: url(%%flairsheet%%); background-position: -192px 0; width: 22px; height: 22px; }
+span.flair-fletching{ background-image: url(%%flairsheet%%); background-position: -216px 0; width: 22px; height: 22px; }
+span.flair-herblore{ background-image: url(%%flairsheet%%); background-position: -240px 0; width: 22px; height: 22px; }
+span.flair-hitpoints{ background-image: url(%%flairsheet%%); background-position: -264px 0; width: 22px; height: 22px; }
+span.flair-hunter{ background-image: url(%%flairsheet%%); background-position: -288px 0; width: 22px; height: 22px; }
+span.flair-magic{ background-image: url(%%flairsheet%%); background-position: -312px 0; width: 22px; height: 22px; }
+span.flair-mining{ background-image: url(%%flairsheet%%); background-position: -336px 0; width: 22px; height: 22px; }
+span.flair-prayer{ background-image: url(%%flairsheet%%); background-position: -360px 0; width: 22px; height: 22px; }
+span.flair-ranging{ background-image: url(%%flairsheet%%); background-position: -384px 0; width: 22px; height: 22px; }
+span.flair-runecrafting{ background-image: url(%%flairsheet%%); background-position: -408px 0; width: 22px; height: 22px; }
+span.flair-slayer{ background-image: url(%%flairsheet%%); background-position: -432px 0; width: 22px; height: 22px; }
+span.flair-smithing{ background-image: url(%%flairsheet%%); background-position: -456px 0; width: 22px; height: 22px; }
+span.flair-strength{ background-image: url(%%flairsheet%%); background-position: -480px 0; width: 22px; height: 22px; }
+span.flair-thieving{ background-image: url(%%flairsheet%%); background-position: -504px 0; width: 22px; height: 22px; }
+span.flair-woodcutting{ background-image: url(%%flairsheet%%); background-position: -528px 0; width: 22px; height: 22px; }
+span.flair-cabbage{ background-image: url(%%flairsheet%%); background-position: -520px -108px; width: 23px; height: 22px; }
+span.flair-sailing{ background-image: url(%%flairsheet%%); background-position: -601px -0px; width: 22px; height: 22px; }
+span.flair-quests{ background-image: url(%%flairsheet%%); background-position: -552px 0; width: 22px; height: 22px; }
+span.flair-overall{ background-image: url(%%flairsheet%%); background-position: -576px 0; width: 22px; height: 22px; }
+
+span.flair-faladortele{ background-image: url(%%flairsheet%%); background-position: -387px -23px; width: 20px; height: 20px; }
+span.flair-camelottele{ background-image: url(%%flairsheet%%); background-position: -411px -23px; width: 20px; height: 20px; }
+span.flair-lumbridgetele{ background-image: url(%%flairsheet%%); background-position: -435px -23px; width: 20px; height: 20px; }
+span.flair-varrocktele{ background-image: url(%%flairsheet%%); background-position: -459px -23px; width: 20px; height: 20px; }
+span.flair-diaries{ background-image: url(%%flairsheet%%); background-position: -481px -23px; width: 22px; height: 22px; }
+span.flair-musicnote{ background-image: url(%%flairsheet%%); background-position: -508px -23px; width: 19px; height: 22px; }
+span.flair-ironman{ background-image: url(%%flairsheet%%); background-position: -534px -23px; width: 17px; height: 22px; }
+span.flair-wildyskull{ background-image: url(%%flairsheet%%); background-position: -553px -23px; width: 22px; height: 22px; }
+span.flair-monkey{ background-image: url(%%flairsheet%%); background-position: -336px -110px; width: 24px; height: 22px; }
+
+/* End default flairs */
+
+/*Awards*/
+/*Cups*/
+span.flair-addycup{ background-image: url(%%flairsheet%%); background-position: -82px -239px; width: 22px; height: 21px; }
+span.flair-addycup3{ background-image: url(%%flairsheet%%); background-position: -82px -121px; width: 22px; height: 21px; }
+span.flair-dragoncup{ background-image: url(%%flairsheet%%); background-position: -104px -218px; width: 22px; height: 21px; }
+span.flair-dragoncup1{ background-image: url(%%flairsheet%%); background-position: -82px -218px; width: 22px; height: 21px; }
+span.flair-runecup{ background-image: url(%%flairsheet%%); background-position: -104px -197px; width: 22px; height: 21px; }
+span.flair-runecup2{ background-image: url(%%flairsheet%%); background-position: -82px -197px; width: 22px; height: 21px; }
+span.flair-goldcup{ background-image: url(%%flairsheet%%); background-position: -82px -30px; width: 22px; height: 21px; }
+span.flair-goldencup{ background-image: url(%%flairsheet%%); background-position: -154px -142px; width: 22px; height: 21px; }
+span.flair-bronzecup{ background-image: url(%%flairsheet%%); background-position: -82px -142px; width: 22px; height: 21px; }
+span.flair-silvercup{ background-image: url(%%flairsheet%%); background-position: -106px -142px; width: 22px; height: 21px; }
+span.flair-papercup{ background-image: url(%%flairsheet%%); background-position: -130px -142px; width: 22px; height: 21px; }
+
+/*Award skill cups*/
+span.flair-defencecup{ background-image: url(%%flairsheet%%); background-position: -30px -364px; width: 22px; height: 21px; }
+span.flair-slayercup{ background-image: url(%%flairsheet%%); background-position: -30px -175px; width: 22px; height: 21px; }
+span.flair-hitpointscup{ background-image: url(%%flairsheet%%); background-position: -82px -260px; width: 22px; height: 21px; }
+span.flair-runecraftcup{ background-image: url(%%flairsheet%%); background-position: -30px -30px; width: 22px; height: 21px; }
+span.flair-overall1cup{ background-image: url(%%flairsheet%%); background-position: -82px -281px; width: 22px; height: 21px; }
+span.flair-overall2cup{ background-image: url(%%flairsheet%%); background-position: -82px -302px; width: 22px; height: 21px; }
+span.flair-attackcup{ background-image: url(%%flairsheet%%); background-position: -82px -365px; width: 22px; height: 21px; }
+span.flair-miningcup{ background-image: url(%%flairsheet%%); background-position: -30px -78px; width: 22px; height: 21px; }
+span.flair-rangedcup{ background-image: url(%%flairsheet%%); background-position: -30px -144px; width: 22px; height: 21px; }
+span.flair-firemakingcup{ background-image: url(%%flairsheet%%); background-position: -30px -343px; width: 22px; height: 21px; }
+span.flair-craftingcup{ background-image: url(%%flairsheet%%); background-position: -30px -196px; width: 22px; height: 21px; }
+span.flair-ehpcup{ background-image: url(%%flairsheet%%); background-position: -82px -344px; width: 22px; height: 21px; }
+span.flair-huntercup{ background-image: url(%%flairsheet%%); background-position: -30px -217px; width: 22px; height: 21px; }
+span.flair-agilitycup{ background-image: url(%%flairsheet%%); background-position: -30px -238px; width: 22px; height: 21px; }
+span.flair-constructioncup{ background-image: url(%%flairsheet%%); background-position: -30px -280px; width: 22px; height: 21px; }
+span.flair-thievingcup{ background-image: url(%%flairsheet%%); background-position: -30px -102px; width: 22px; height: 21px; }
+span.flair-fletchingcup{ background-image: url(%%flairsheet%%); background-position: -30px -322px; width: 22px; height: 21px; }
+span.flair-woodcuttingcup{ background-image: url(%%flairsheet%%); background-position: -30px -301px; width: 22px; height: 21px; }
+span.flair-smithingcup{ background-image: url(%%flairsheet%%); background-position: -82px -323px; width: 22px; height: 21px; }
+span.flair-prayercup{ background-image: url(%%flairsheet%%); background-position: -30px -51px; width: 22px; height: 21px; }
+span.flair-cookingcup{ background-image: url(%%flairsheet%%); background-position: -30px -385px; width: 22px; height: 21px; }
+span.flair-herblorecup{ background-image: url(%%flairsheet%%); background-position: -82px -386px; width: 22px; height: 21px; }
+span.flair-farmingcup{ background-image: url(%%flairsheet%%); background-position: -30px -406px; width: 22px; height: 21px; }
+span.flair-fishingcup{ background-image: url(%%flairsheet%%); background-position: -30px -259px; width: 22px; height: 21px; }
+span.flair-magiccup{ background-image: url(%%flairsheet%%); background-position: -82px -407px; width: 22px; height: 21px; }
+
+/* Creativity contest winner scrolls */
+span.flair-creativitywinner { background-image: url(%%flairsheet%%); background-position: -204px -81px; width: 32px; height: 33px; }
+span.flair-creativityrunnerup { background-image: url(%%flairsheet%%); background-position: -159px -80px; width: 30px; height: 31px; }
+span.flair-creativitywinner:hover {height: 33px !important; }
+span.flair-creativityrunnerup:hover {height: 33px !important; }
+
+/*"Best of" contest flair*/
+span.flair-bestof{ background-image: url(%%flairsheet%%); background-position: -591px -22px; width: 21px; height: 25px; }
+
+/*Subscriber milestone flairs */
+.flair-20k{ background-image: url(%%flairsheet%%); background-position: -549px -71px; width: 35px; height:31px; }
+.flair-30k{ background-image: url(%%flairsheet%%); background-position: -584px -71px; width: 34px; height:31px; }
+.flair-40k{ background-image: url(%%flairsheet%%); background-position: -583px -105px; width: 32px; height:31px; }
+.flair-50k {background-image: url(%%snooflair50k%%); background-position:0 0; width:33px; height:31px;}
+.flair-60k{ background-image: url(%%flairsheet%%); background-position: -571px -139px; width: 59px; height:23px; }
+.flair-60k:hover{height:23px; line-height:23px;}
+.flair-70k{ background-image: url(%%flairsheet%%); background-position: -557px -170px; width: 73px; height:28px; }
+.flair-70k:hover{height:28px; line-height:28px;min-width:73px;}
+
+/* 80k flair pls */
+.flair-90k{ background-image: url(%%flairsheet%%); background-position: -583px -243px; width: 34px; height:29px; }
+.flair-90k:hover{height:29px; line-height:29px;min-width:34px;}
+
+.flair-200k{ background-image: url(%%flairsheet%%); background-position: -519px -142px; width: 51px; height:19px; }
+
+/* party hat flair for f2p */
+.flair-blackphat{ background-image: url(%%flairsheet%%); background-position: -356px -48px; width: 28px; height: 23px; }
+.flair-purplephat{ background-image: url(%%flairsheet%%); background-position: -390px -48px; width: 28px; height: 23px; }
+.flair-greenphat{ background-image: url(%%flairsheet%%); background-position: -424px -48px; width: 28px; height: 23px; }
+.flair-bluephat{ background-image: url(%%flairsheet%%); background-position: -458px -48px; width: 28px; height: 23px; }
+.flair-yellowphat{ background-image: url(%%flairsheet%%); background-position: -494px -48px; width: 28px; height: 23px; }
+.flair-whitephat{ background-image: url(%%flairsheet%%); background-position: -532px -48px; width: 28px; height: 23px; }
+.flair-redphat{ background-image: url(%%flairsheet%%); background-position: -566px -48px; width: 28px; height: 23px; }
+.flair-rainbowphat{ background-image: url(%%flairsheet%%); background-position: -600px -48px; width: 28px; height: 23px; }
+.flair-santahat{ background-image: url(%%flairsheet%%); background-position: -550px -108px; width: 28px; height: 23px; }
+
+/* Monkey Madness 2 limited edition flairs */
+span.flair-monkey-gnome{ background-image: url(%%flairsheet%%); background-position: -361px -103px; width: 24px; height: 29px; }
+span.flair-monkey-king{ background-image: url(%%flairsheet%%); background-position: -386px -99px; width: 24px; height: 33px; }
+span.flair-monkey-tophat{ background-image: url(%%flairsheet%%); background-position: -411px -100px; width: 24px; height: 32px; }
+span.flair-monkey-phat{ background-image: url(%%flairsheet%%); background-position: -436px -102px; width: 24px; height: 30px; }
+span.flair-monkey-beret{ background-image: url(%%flairsheet%%); background-position: -461px -105px; width: 25px; height: 27px; }
+span.flair-monkey-robin{ background-image: url(%%flairsheet%%); background-position: -487px -104px; width: 31px; height: 28px; }
+
+
+/*Personally customized flairs*/
+span.flair-tick { background-image: url(%%flairsheet%%); background-position: -292px -77px; width:15px; height:12px;}
+span.flair-lithe-leaf{ background-image: url(%%flairsheet%%); background-position: -68px -24px; width: 65px; height: 27px; }
+span.flair-drop-an-imp{ background-image: url(%%flairsheet%%); background-position: -16px -123px; width: 36px; height: 21px; }
+span.flair-t-rolling{ background-image: url(%%flairsheet%%); background-position: -68px -60px; width: 36px; height: 21px; }
+span.flair-rensrs{ background-image: url(%%flairsheet%%); background-position: -82px -81px; width: 54px; height: 30px; }
+span.flair-tropicalcreeper { background-image: url(%%flairsheet%%); background-position: -135px -42px; width: 68px; height: 38px; }
+span.flair-athemoe { background-image: url(%%flairsheet%%); background-position: -67px -111px; width: 100px; height: 31px; }
+span.flair-athemoe:hover {height: 31px !important; }
+span.flair-shaanosrs { background-image: url(%%flairsheet%%); background-position: -138px -80px; width: 51px; height: 31px; }
+span.flair-shaanosrs:hover {height: 31px !important;}
+span.flair-tropicalcreeper:hover {height: 38px !important;}
+span.flair-hess- { background-image: url(%%flairsheet%%); background-position: -298px -22px; width: 37px; height: 22px; }
+span.flair-EdHicks { background-image: url(%%flairsheet%%); background-position: -248px -22px; width: 39px; height: 22px; }
+span.flair-marasaur { background-image: url(%%flairsheet%%); background-position: -82px -52px; width: 40px; height: 29px; }
+span.flair-marasaur:hover {height: 31px !important;}
+span.flair-iveljetorox { background-image: url(%%flairsheet%%); background-position: -15px -144px; width: 37px; height: 21px; }
+span.flair-baconcheesepie { background-image: url(%%flairsheet%%); background-position: -15px -51px; width: 37px; height: 21px; }
+span.flair-knirgh { background-image: url(%%flairsheet%%); background-position: -154px -134px; width: 50px; height: 30px; }
+span.flair-neyer-osrs { background-image: url(%%flairsheet%%); background-position: -199px -22px; width: 39px; height: 22px; }
+span.flair-realityreid { background-image:url(%%sprites%%);background-position: 0 -234px; width: 29px; height: 28px; } 
+span.flair-osrs-trance{ background-image: url(%%flairsheet%%); background-position: -30px -165px; width: 59px; height: 31px; }
+span.flair-scottwilson07 { background-image: url(%%flairsheet%%); background-position: -0px -72px; width: 52px; height: 27px; }
+span.flair-laszlob { background-image: url(%%flairsheet%%); background-position: -189px -81px; width: 45px; height: 31px; }
+span.flair-le-oscar{ background-image: url(%%flairsheet%%); background-position: -2px -172px; width: 50px; height: 24px; }
+span.flair-iemzpc{ background-image: url(%%flairsheet%%); background-position: -280px -45px; width: 32px; height: 32px; }
+span.flair-oblivinite{ background-image: url(%%flairsheet%%); background-position: -330px -72px; width: 21px; height: 23px; }
+span.flair-rawktail{ background-image: url(%%flairsheet%%); background-position: -216px -44px; width: 64px; height: 33px; }
+span.flair-hi-alch-whip{ background-image: url(%%flairsheet%%); background-position: -312px -44px; width: 29px; height: 28px; }
+span.flair-rn95{ background-image: url(%%flairsheet%%); background-position: -0px -22px; width: 52px; height: 29px; }
+span.flair-iamkeeferz{ background-image: url(%%flairsheet%%); background-position: -236px -83px; width: 28px; height: 30px; }
+span.flair-not-ross-rs{ background-image: url(%%flairsheet%%); background-position: -236px -83px; width: 28px; height: 30px; }
+span.flair-modmatk{ background-image: url(%%flairsheet%%); background-position: -576px -22px; width: 36px; height: 25px; }
+span.flair-b0aty{ background-image:url(%%sprites%%);background-position: -0px -47px; width: 17px; height: 31px; }
+span.flair-b0aty:hover {text-indent:20px;}
+span.flair-os-events{ background-image:url(%%sprites%%);background-position: 0 -558px; width: 30px; height: 27px; }
+span.flair-os-events:hover {text-indent:30px;}
+span.flair-zeldengm{ background-image: url(%%flairsheet%%); background-position:-307px -72px; width:23px; height:24px;  }
+span.flair-macaronie{ background-image: url(%%flairsheet%%); background-position: -69px -121px; width: 35px; height: 21px; }
+span.flair-heliarch{ background-image: url(%%flairsheet%%); background-position: -69px -121px; width: 35px; height: 21px; }
+span.flair-oye-iv {background-image:url(%%new-spritesheet%%); background-position:-151px -332px; width:38px; height:21px; line-height:21px;}
+span.flair-oye-iv:hover {min-width:38px;}
+span.flair-nvidrine{ background-image:url(%%sprites%%);background-position: 0 -146px; width: 43px; height: 28px; }
+span.flair-gentletractor{ background-image:url(%%flairsheet%%);background-position: -303px -106px; width: 29px; height: 29px; }
+span.flair-dreammentor{ background-image:url(%%flairsheet%%);background-position: -68px -386px; width: 36px; height: 21px; }
+/*span.flair-mb{ background-image:url(%%mb%%);width: 28px; height: 28px; }*/
+
+/*event flairs, do not give css classes ever*/
+span.flair-bluegg{ background-image: url(%%flairsheet%%); background-position: -356px -71px; width: 19px; height: 22px; }
+span.flair-greenegg{ background-image: url(%%flairsheet%%); background-position: -375px -71px; width: 20px; height: 22px; }
+span.flair-redegg{ background-image: url(%%flairsheet%%); background-position: -395px -71px; width: 19px; height: 22px; }
+span.flair-yellowegg{ background-image: url(%%flairsheet%%); background-position: -414px -71px; width: 19px; height: 22px; }
+span.flair-scythe{ background-image: url(%%flairsheet%%); background-position: -519px -71px; width: 30px; height: 31px; }
+span.flair-pumpkin{ background-image: url(%%flairsheet%%); background-position: -496px -71px; width: 23px; height: 20px; }
+span.flair-redhween{ background-image: url(%%flairsheet%%); background-position: -433px -71px; width: 21px; height: 28px; }
+span.flair-greenhween{ background-image: url(%%flairsheet%%); background-position: -454px -71px; width: 21px; height: 28px; }
+span.flair-bluehween{ background-image: url(%%flairsheet%%); background-position: -475px -71px; width: 21px; height: 28px; }
+
+/*godwars flair */
+span.flair-dragonBoots{ background-image: url(%%gwdflair%%); background-position: 0 0; width: 30px; height: 27px; } 
+span.flair-Godsword_shard_1{  background-image: url(%%gwdflair%%); background-position: -32px 0; width: 28px; height: 30px; } 
+span.flair-Godsword_shard_2{ background-image: url(%%gwdflair%%);  background-position: -62px 0; width: 29px; height: 30px; } 
+span.flair-Godsword_shard_3{  background-image: url(%%gwdflair%%); background-position: -93px 0; width: 27px; height: 23px; } 
+span.flair-armadylchestplate{  background-image: url(%%gwdflair%%); background-position: -122px 0; width: 29px; height: 27px; } 
+span.flair-armadylgodsword{  background-image: url(%%gwdflair%%); background-position: -153px 0; width: 31px; height: 28px; } 
+span.flair-armadylhelmet{ background-image: url(%%gwdflair%%);  background-position: -186px 0; width: 30px; height: 25px; } 
+span.flair-armadylhilt{  background-image: url(%%gwdflair%%); background-position: -218px 0; width: 30px; height: 29px; } 
+span.flair-armadylplateskirt{ background-image: url(%%gwdflair%%);  background-position: -250px 0; width: 15px; height: 29px; } 
+span.flair-bandosboots{ background-image: url(%%gwdflair%%);  background-position: -267px 0; width: 28px; height: 27px; } 
+span.flair-bandoschestplate{  background-image: url(%%gwdflair%%); background-position: -297px 0; width: 21px; height: 28px; } 
+span.flair-bandosgodsword{ background-image: url(%%gwdflair%%);  background-position: -320px 0; width: 29px; height: 29px; } 
+span.flair-bandoshilt{ background-image: url(%%gwdflair%%);  background-position: -351px 0; width: 26px; height: 32px; } 
+span.flair-bandostassets{ background-image: url(%%gwdflair%%);  background-position: -379px 0; width: 25px; height: 29px; } 
+span.flair-godswordblade{ background-image: url(%%gwdflair%%);  background-position: -406px 0; width: 34px; height: 32px; } 
+span.flair-saradomingodsword{  background-image: url(%%gwdflair%%); background-position: -442px 0; width: 28px; height: 29px; } 
+span.flair-saradominhilt{ background-image: url(%%gwdflair%%);  background-position: -472px 0; width: 36px; height: 32px; } 
+span.flair-saradominsword{  background-image: url(%%gwdflair%%); background-position: -510px 0; width: 29px; height: 29px; } 
+span.flair-steambattlestaff{  background-image: url(%%gwdflair%%); background-position: -541px 0; width: 25px; height: 29px; } 
+span.flair-zamorakiangodsword{ background-image: url(%%gwdflair%%);  background-position: -568px 0; width: 29px; height: 30px; } 
+span.flair-zamorakianhilt{ background-image: url(%%gwdflair%%);  background-position: -599px 0; width: 34px; height: 35px; } 
+span.flair-zamorakianspear{ background-image: url(%%gwdflair%%);  background-position: -635px 0; width: 35px; height: 35px; } 
+span.flair-acb{ background-image: url(%%sprites%%); background-position: 0 0; width: 32px; height: 27px; } 
+
+/* Mod flairs/Verification flairs */
+span.flair-forummod{ background-image: url(%%flairsheet%%); background-position: -140px -26px; width: 13px; height: 11px; }
+span.flair-playermod{ background-image: url(%%flairsheet%%); background-position: -153px -26px; width: 13px; height: 11px; }
+span.flair-jagexmod{ background-image: url(%%flairsheet%%); background-position: -166px -26px; width: 13px; height:11px; }
+span.flair-clanchat{ background-image: url(%%flairsheet%%); background-position: -247px -116px; width: 14px; height:14px; }
+span.flair-twitch{ background-image: url(%%flairsheet%%); background-position: -335px -22px; width: 18px; height: 18px; }
+span.flair-osbuddy{ background-image: url(%%flairsheet%%); background-position: -353px -22px; width: 18px; height: 18px; }
+span.flair-wikia{ background-image: url(%%flairsheet%%); background-position: -541px -248px; width: 30px; height: 25px; }
+
+/*Unused flairs*/
+span.flair-eventmod2{ background-image: url(%%flairsheet%%); background-position: -179px -26px; width: 13px; height:11px; }
+span.flair-addycup3forummod{ background-image: url(%%flairsheet%%); background-position: -0px -0px; width: 34px; height: 21px; }
+span.flair-runecup2playermod{ background-image: url(%%flairsheet%%); background-position: -69px -197px; width: 35px; height: 21px; }
+span.flair-dragoncup1playermod{ background-image: url(%%flairsheet%%); background-position: -69px -218px; width: 35px; height: 21px; }
+span.flair-dragoncup1forummod{ background-image: url(%%flairsheet%%); background-position: -0px -0px; width: 35px; height: 21px; }
+span.flair-blackmask{ background-image:url(%%sprites%%);background-position: 0 -98px; width: 21px; height: 28px; } 
+
+
+
+
+.commentarea span.flair-redhween:hover, 
+.link span.flair-redhween:hover, 
+.commentarea span.flair-bluehween:hover, 
+.link span.flair-bluehween:hover, 
+.commentarea span.flair-greenhween:hover, 
+.link span.flair-greenhween:hover {
+visibility: visible;
+width: auto;
+min-width:21px;
+height: 28px;
+line-height: 22px;
+padding: 0 2px;
+text-indent: 0;
+background-image: none;
+cursor: default;
+border-width: 1px;
+background-color: whitesmoke;
+color: black;
+}
+
+.commentarea span.flair-scythe:hover, 
+.link span.flair-scythe:hover {
+visibility: visible;
+width: auto;
+min-width:30px;
+height: 31px;
+line-height: 22px;
+padding: 0 2px;
+text-indent: 0;
+background-image: none;
+cursor: default;
+border-width: 1px;
+background-color: whitesmoke;
+color: black;
+}
+
+
+/** Corp flair **/
+span.flair-holyelixir{ background-image: url(%%sprites%%); background-position: -117px -682px; width: 13px; height: 27px; } 
+
+span.flair-holyelixir:hover {
+text-indent:30px;
+height:27px;
+}
+
+span.flair-spiritshield{ background-image: url(%%sprites%%); background-position: -93px -761px; width: 53px; height: 32px; } 
+
+span.flair-spiritshield:hover {
+text-indent:56px;
+}
+
+span.flair-blessedspiritshield{ background-image: url(%%sprites%%); background-position: -92px -805px; width: 53px; height: 31px; } 
+
+span.flair-blessedspiritshield:hover{
+text-indent:56px;
+height:31px;
+}
+
+span.flair-spectralsigil{ background-image: url(%%sprites%%); background-position: -77px -840px; width: 100px; height: 31px; } 
+
+span.flair-spectralsigil:hover{
+text-indent:104px;
+height:31px;
+}
+
+span.flair-arcaneshield{ background-image: url(%%sprites%%); background-position: -92px -724px; width: 61px; height: 32px; } 
+
+span.flair-arcaneshield:hover{
+text-indent:63px;
+height:32px;
+}
+
+span.flair-elysianshield{ background-image: url(%%sprites%%); background-position: -161px -724px; width: 27px; height: 32px; } 
+
+span.flair-elysianshield:hover{
+text-indent:33px;
+height:32px;
+}
+
+span.flair-elysiansigil{ background-image: url(%%sprites%%); background-position: -160px -764px; width: 24px; height: 26px; } 
+
+span.flair-elysiansigil:hover{
+text-indent:26px;
+height:26px;
+}
+span.flair-arcanesigil{ background-image: url(%%sprites%%); background-position: -156px -808px; width: 26px; height: 24px; } 
+
+span.flair-arcanesigil:hover{
+text-indent:28px;
+height:24px;
+}
+
+span.flair-darkcorepet{ background-image: url(%%sprites%%); background-position: -199px -726px; width: 24px; height: 28px; } 
+
+span.flair-darkcorepet:hover{
+text-indent:25px;
+height:28px;
+}
+
+span.flair-pizza{ background-image: url(%%sprites%%); background-position: -198px -846px; width: 30px; height: 22px; } 
+
+span.flair-pizza:hover{
+text-indent:32px;
+height:22px;
+}
+
+span.flair-corpsoloer{background-image: url(%%sprites%%); background-position: -79px -878px; width: 44px; height: 50px; } 
+
+span.flair-corpsoloer:hover{
+text-indent:46px;
+height:50px !important;
+min-height:50px !important;
+}
+
+.commentarea span.flair-jagexmod:hover, 
+.link span.flair-jagexmod:hover, 
+.commentarea span.flair-forummod:hover, 
+.link span.flair-forummod:hover, 
+.commentarea span.flair-playermod:hover, 
+.link span.flair-playermod:hover {
+font-size:11px;
+height:11px;
+border:0px;
+line-height:11px;
+}
+
+.side a[href="#/RES_SR_Config/NightModeCompatible"]{
+display:none;
+}
+
+#RESShortcutsViewport #RESShortcuts.sr-bar {
+z-index:0;
+}
+
+/*
+@media (max-width:825px) {
+.side {
+margin-right:0px;
+}
+
+
+body {
+background-image:url(%%bl-tile-side-small-screens%%) !important;
+background-position:right center;
+background-repeat:repeat-y;
+}
+.content[role="main"] {
+    margin-right: 340px;
+    margin-top: 45px;
+}
+#header-bottom-left ul.tabmenu{ 
+    right: 334px;
+    padding-left: 334px;
+}
+}
+*/
+.commentarea .infobar {
+margin-right:20px;
+}
+
+body.comments-page #header {
+margin:0px;
+background-color:#000;
+background-image:url(%%top-border%%), url(%%border-bottom%%), url(%%header-comments2%%);
+background-repeat:repeat-x, repeat-x, repeat-x;
+background-position:0px 19px, bottom center, 0px 25px;
+}
+
+#header-bottom-right #mail.nohavemail{
+background-image:url(%%new-spritesheet%%);
+    background-position: -153px -288px;
+    width: 33px!important;
+    height: 18px;
+    margin-top: -5px;
+    margin-bottom: -3px;
+}
+#header-bottom-right #mail.havemail{
+background-image:url(%%new-spritesheet%%);
+    background-position: -151px -309px;
+    width: 35px!important;
+    height: 18px;
+    margin-top: -6px;
+    margin-bottom: -2px;
+}
+
+@media (max-width:900px) {
+body {
+overflow-x:hidden;
+background-image:url(%%bl-tile-side-900px%%);
+
+}
+.side {
+margin-left:-270px;
+    right: -270px;
+    position: relative;
+    opacity: 0.6;
+    -webkit-transition: right 300ms linear, opacity 300ms linear;
+    -moz-transition:  right 300ms linear, opacity 300ms linear;
+    -o-transition:  right 300ms linear, opacity 300ms linear;
+    transition:  right 300ms linear, opacity 300ms linear;
+}
+
+.side:hover {
+    -webkit-transition: right 300ms linear, opacity 300ms linear;
+    -moz-transition:  right 300ms linear, opacity 300ms linear;
+    -o-transition:  right 300ms linear, opacity 300ms linear;
+    transition:  right 300ms linear, opacity 300ms linear;
+right:-15px;
+opacity:1;
+}           
+.content[role="main"] {
+margin-right:100px;
+}
+
+                                             
+#header-bottom-left ul.tabmenu {
+
+right:92px;
+padding-left:92px;
+}
+.side blockquote blockquote blockquote {
+top:5px;
+}
+
+.commentarea .sitetable.nestedlisting {
+margin-right:10px;
+}
+
+}
+
+.side:hover {
+z-index:1;
+}
+
+
+
+
+
+
+
+.side a[href^="#stw"] { background-image: url(%%flairsheet%%); width:22px; height:21px; display:inline-block; cursor:default;}
+.side a[href*="defencecup"] {  background-position: -30px -364px; }
+.side a[href*="slayercup"] {  background-position: -30px -175px; }
+.side a[href*="hitpointscup"] {  background-position: -82px -260px; }
+.side a[href*="runecraftcup"] {  background-position: -30px -30px; }
+.side a[href*="overall1cup"] {  background-position: -82px -281px; }
+.side a[href*="overall2cup"] {  background-position: -82px -302px; }
+.side a[href*="attackcup"] {  background-position: -82px -365px; }
+.side a[href*="miningcup"] {  background-position: -30px -78px; }
+.side a[href*="angedcup"] {  background-position: -30px -144px; }
+.side a[href*="firemakingcup"] {  background-position: -30px -343px; }
+.side a[href*="craftingcup"] {  background-position: -30px -196px; }
+.side a[href*="ehpcup"] {  background-position: -82px -344px; }
+.side a[href*="huntercup"] {  background-position: -30px -217px; }
+.side a[href*="agilitycup"] {  background-position: -30px -238px; }
+.side a[href*="fishingcup"] {  background-position: -30px -259px; }
+.side a[href*="constructioncup"] {  background-position: -30px -280px; }
+.side a[href*="thievingcup"] {  background-position: -30px -102px; }
+.side a[href*="fletchingcup"] {  background-position: -30px -322px; }
+.side a[href*="woodcuttingcup"] {  background-position: -30px -301px; }
+.side a[href*="smithingcup"] {  background-position: -82px -323px; }
+.side a[href*="prayercup"] {  background-position: -30px -51px; }
+.side a[href*="cookingcup"] {  background-position: -30px -385px; }
+.side a[href*="herblorecup"] {  background-position: -82px -386px; }
+.side a[href*="farmingcup"] {background-position: -30px -406px; }
+
+.side .md thead {
+border:0px;
+display:none;
+}
+.side .md table td a {
+color:#fff000;
+}
+.side .md table td a:hover {
+text-decoration:underline
+}
+
+.side .md table td  {
+border:0px !important;
+background-image: url(%%border-bottom%%), url(%%left-border%%), url(%%right-border%%);
+background-position: bottom center, left center, right center;
+background-repeat:repeat-x,repeat-y, repeat-y;
+background-size:250px 6px, auto, auto;
+}
+
+.side .md table {
+margin:0px;
+}
+
+.side .md table td .RESUserTag {
+display:none;
+}
+
+.side .md h4 {
+text-indent:-9999px;
+height:0px;
+margin:0px auto;
+box-sizing:border-box;
+background-repeat:repeat-x;
+background-position:bottom center;
+text-align:center;
+}
+
+.side .md h4 + blockquote {
+margin:0px;
+background-image:url(%%border-bottom%%);
+background-repeat:repeat-x;
+background-position:bottom center;
+padding:5px;
+padding-bottom:10px;
+}
+.side .md h4 + blockquote a[href="#u"] {
+min-width:80px;
+width:80px;
+display:inline-block;
+cursor:default;
+pointer-events:none;
+}
+.side .md h4 + blockquote a[href^="#gains"] {
+height: 12px;
+line-height:12px;
+width: 190px;
+box-sizing:border-box;
+padding-left:5px;
+max-width: 190px;
+margin-top: 3px;
+font-size: 10px;
+text-align: left;
+display: inline-block;
+background-image: url(%%sotwbar%%);
+border:1px solid black;
+background-repeat: repeat-x;
+white-space: nowrap;
+cursor:default;
+pointer-events:none;
+}
+
+
+.side .md h4 + blockquote a[href="#gains1"] {
+width:190px;
+}
+.side .md h4 + blockquote a[href="#gains2"] {
+width:165px;
+}
+.side .md h4 + blockquote a[href="#gains3"] {
+width:163px;
+}
+.side .md h4 + blockquote a[href="#gains4"] {
+width:140px;
+}
+.side .md h4 + blockquote a[href="#gains5"] {
+width:133px;
+}
+
+
+
+/** dmm sidebar filters **/
+
+.side a[href*="https://nf.reddit.com/r/2007scape?limit=50"] {
+background-image:url(%%dmm%%);
+background-position:0px 0px;
+width:250px;
+height:66px;
+display:block;
+margin:0 auto;
+}
+
+.side a[href*="https://nf.reddit.com/r/2007scape?limit=50"]:hover {
+background-position:0px -66px;
+}
+
+
+html:lang(nf) .side a[href*="https://www.reddit.com/r/2007scape#unhide"] {
+background-image:url(%%dmm%%);
+background-position:0px -138px;
+width:250px;
+height:66px;
+display:block;
+margin:0 auto;
+}
+
+html[lang="nf"] .side a[href*="https://www.reddit.com/r/2007scape#unhide"]:hover {
+background-position:0px -204px;
+}
+
+html[lang="nf"] .side a[href*="https://nf.reddit.com/r/2007scape?limit=50"]{
+display:none;
+}
+
+html[lang="nf"] .sitetable .thing.linkflair-humor{display:none}
+
+.entry .flat-list .report-button a, 
+.res-nightmode .entry .flat-list .report-button a {
+    color: #b20000;
+}
+
+.userattrs a.cakeday {
+width:15px !important;
+height:14px !important;
+background-image:url(%%flairsheet%%) !important;
+background-position:-132px -197px !important;
+background-repeat:no-repeat !important;
+}
+
+.linkflair-fire .linkflairlabel {
+visibility: visible;
+text-indent: -9999px;
+/* hide the flair text */
+margin: 0px 3px 0px;
+width: 16px;
+height: 14px;
+display: -moz-inline-stack;
+display: inline-block;
+vertical-align: top;
+background-repeat: no-repeat;
+background-image: url(%%new-spritesheet%%);
+background-color: transparent;
+-webkit-animation: fire 1s steps(9) infinite;
+-moz-animation: fire 1s steps(9) infinite;
+-ms-animation: fire 1s  steps(9) infinite;
+-o-animation: fire 1s  steps(9) infinite;
+animation: fire 1s steps(9) infinite;
+vertical-align: middle;
+border-width: 0;
+padding: 0;
+}
+
+@-webkit-keyframes fire {
+   from { background-position:-0px -433px;}
+     to { background-position:-0px -559px;}
+}
+
+@-moz-keyframes fire {
+   from { background-position:-0px -433px;}
+     to { background-position:-0px -559px;}
+}
+
+@-ms-keyframes fire {
+   from { background-position:-0px -433px;}
+     to { background-position:-0px -559px;}
+}
+
+@keyframes fire {
+   from { background-position:-0px -433px;}
+     to { background-position:-0px -559px;}
+}

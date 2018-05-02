@@ -16,6 +16,11 @@ const horizontal_rule = "\n***\n";
 var Roller = require('./src/roller');
 var Sanitiser = require('./src/sanitiser');
 var Formatter = require('./src/formatter');
+var DB = require('./src/db_interface');
+
+
+// Initialise database interface instance
+
 
 // Build Snoowrap and Snoostorm clients
 const r = new Snoowrap({
