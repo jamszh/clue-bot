@@ -15,7 +15,7 @@ FREE-TIER also means that the bot will only be running 18 hours a day.
 
 ### Usage  
 Simply comment the specific invokation call and the bot will reply after a few seconds (Refreshing the page may be required)
-You can try it out in the ~~[2007scape](https://www.reddit.com/r/2007scape/)~~ [2007scape_cluebot](https://www.reddit.com/r/2007scape_cluebot/) subreddit.  
+You can try it out in the ~~[2007scape](https://www.reddit.com/r/2007scape/)~~ (Got banned because people started using it to hijack other threads) [2007scape_cluebot](https://www.reddit.com/r/2007scape_cluebot/) subreddit.  
 
 Invoke the bot on a specific level:
 
