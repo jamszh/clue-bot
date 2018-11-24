@@ -1,4 +1,4 @@
-var pricer = require('./pricer');
+
 var db = require('./db_interface')
 
 module.exports = class Roller {
@@ -6,97 +6,69 @@ module.exports = class Roller {
 	constructor(level){
 		this.level = level;
 	}
-
-	roll(){
-		var reward_list = [];
-
-		// Wildcards
-		// -- How many times we roll each table
-
-		// [0] - common
-		// [1] - pages
-		// [2] - rare/uniques
-		// [3] - super rare
-		// [4] - 3age
-
-		var difficulty = 'hard';
-		var wildcards = [0, 0, 0, 0, 0];
-		var pages = 0;
-		var wildcard_level = ['common', 'unique', 'super', '3a'];
-
-		// Hardcoded for now
-		// 4 rolls for the rare drop table is used for hard clues
-		var reward_level_wildcard_init = 4
-
-		db.getTableCount(difficulty, wildcard_level[0], function(result){
-			console.log(result);
-		});
-
-
-
-
-
-		// 	//num_items = rows[0].c;
-
-		// 	for(var i = 0; i < reward_level_wildcard_init; i++){
-		// 		// Treat wildcard as an extra row
-		// 		// Increase num_items by 2 (Pages and rare wildcard) ** DOESNT WORK???
-		// 		var roll = Math.floor(Math.random()*num_items);
-		// 		if(roll == 0){
-		// 			// Increment rare roll
-		// 			wildcards[2]++;
-		// 		}else if(roll == 1){
-		// 			// Increment page roll
-		// 			wildcards[1]++;
-		// 		}else{
-		// 			// Increment common roll
-		// 			wildcards[0]++;
-		// 		}
-		// 	}
-
-
-		// 	// Complementary common rolls (Up to 2)
-		// 	for(var i = 0; i < Math.floor(Math.random() * 2); i++){
-		// 		wildcards[0]++;
-		// 	}
-
-
+	
+	/* 
+	 * Method that determines the roll quantity
+	 */
+	roll() {
+	
+		// Number of items hardcoded for now
+		var item_counts = [26, 108, 15, 11];
+	
+		// Set number of rolls (Dependent on difficulty) on common table
+		var init_roll_count = 4;
+		var threshold = 20;
 		
+		// Page table is seperate
+		var table_names = ['pages', 'common', 'unique', 'super', '3a'];
+		var roll_table = [0, init_roll_count, 0, 0, 0];
+		var curr_idx = 1;
+		var roll_val;
+		var promote_idx;
 
+		for (var i = 0; i < init_roll_count; i++) {
+			roll_val = Math.floor(Math.random() * threshold);
+	
+			if (roll_val == 0) {
+				roll_table[curr_idx+1]++;
+				roll_table[curr_idx]--;
+			}
+		}
+	
+		while (curr_idx < roll_table.length) {
+			var rolls = roll_table[curr_idx];
+			for (var i = 0; i < rolls; i++) {
+				roll_val = Math.floor(Math.random() * item_counts[curr_idx-1]);
+	
+				if (roll_val == 0) {
+					// Pages are at the 0th index, but are of greater value than common.
+					// However rolls cannot be promoted from this page table hence it is at the 0th index
+					promote_idx = curr_idx;
+	
+					if (curr_idx == 1) {
+						promote_idx--;
+					} else {
+						promote_idx++;
+					}
 
-
-		// // No wildcard for 3a drop table
-		// for(var i = 2; i < 4; i++){
-		// 	// Wildcard check
-		// 	if (wildcards[i] > 0){
-		// 		this.c.query('SELECT COUNT(*) as c from hard_' + wildcard_level[i], function(err, rows) {
-		// 			var num_items = rows[0].c;
-
-		// 			// Treat wildcard as an extra row
-		// 			// Increase num_items by 1 with value of 0 being wildcard
-		// 			// If wildcard hit, increment the array
-		// 			if(Math.floor(Math.random() * (num_items + 1)) == 0){
-		// 				wildcards[i+1]++;
-		// 			}
-		// 		if (err)
-		// 			throw err;
-		// 		});
-		// 	}			
-		// }
-
-		// // Roll items
-		// for(var i = 0; i < wildcards.length; i++){
-		// 	var num_rolls = wildcards[i];
-
-		// 	if(num_rolls > 0){
-		// 		this.c.query('SELECT * FROM hard_'
-		// 			+ wildcard_level[i] + ' ORDER BY RAND() LIMIT ' + num_rolls, function(err, rows) {
-		// 			for(var i = 0; i < num_rolls; i++){
-		// 				reward_list.push(row[i]);
-		// 			}
-		// 		});
-		// 	}
-		// }
-		return reward_list;
+					// Cannot promote after 3a table
+					if (promote_idx < roll_table.length) {
+						roll_table[promote_idx]++;
+						roll_table[curr_idx]--;
+					}
+				}
+			}
+			curr_idx++;
+		}
+	
+		// Complementary common rolls
+		roll_table[1] += Math.floor(Math.random() * 2);
+	
+		var encoding = {};
+	
+		for (var i = 0; i < roll_table.length; i++) {
+			encoding[table_names[i]] = roll_table[i];
+		}
+		return encoding;
 	}
 }

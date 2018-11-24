@@ -4,7 +4,6 @@ require('dotenv').config();
 // Reddit bot - Front End
 
 // Libraries
-
 const Snoowrap = require('snoowrap');
 const Snoostorm = require('snoostorm');
 const comment_gap = "\n\n&nbsp\;\n\n";
