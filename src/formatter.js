@@ -7,11 +7,7 @@ module.exports = function(data){
 
 	var total_value = 0;
 
-
-
 	data.forEach(function(obj){
-
-
 		var price = obj.price;
 
 		// Casket reward interface includes stackable items

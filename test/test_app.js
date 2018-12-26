@@ -1,26 +1,28 @@
 var Roller = require('./../src/roller');
-var Sanitiser = require('./../src/sanitiser');
-var formatter = require('./../src/formatter');
+// var Sanitiser = require('./../src/sanitiser');
+// var formatter = require('./../src/formatter');
+var Builder = require('./../src/builder');
 var DB = require('./../src/db_interface');
 
 
-
-// Initialise database interface instance
-// var db = new DB();
-
-
-// Just a dummy initiate js file
-// Test the back-end without using reddit etc
-
+// // Just a dummy initiate js file
+// // Test the back-end without using reddit etc
 var level = 'hard';
 var roller = new Roller(level);
+var data = roller.roll();
 
+var db = new DB();
 
-// Sanitiser(roller.roll()).then(function(data){
-// 	var out = formatter(data);
-// 	console.log(out);
-// })
+var query = db.queryBuilder(data, "hard");
 
+db.execute(query).then(function(rows) {
+    var builder = new Builder();
 
-roller.roll();
+    builder.processResults(rows).then((result) => {
+      console.log(result);
+      process.exit(22);
+    });
+});
+
+db.execute(query);
 

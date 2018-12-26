@@ -47,12 +47,7 @@ for(var i = 0; i < table.length; i++){
 // 		throw err;
 // 	console.dir(rows);
 // 	});
-}
-
-
-
+// }
 
 c.end();
-
-
 
