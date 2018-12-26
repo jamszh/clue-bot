@@ -1,8 +1,6 @@
-var Client = require('mariasql');
+const Client = require('mariasql');
+const clue_level = 'hard';
 require('dotenv').config();
-var clue_level = 'hard';
-
-
 
 c = new Client({
 	host: process.env.DB_HOST,
@@ -14,7 +12,6 @@ c.query('USE cluebot', function(err, rows) {
 if (err)
 	throw err;
 });
-
 
 /* 
  * Function that determines the rolls
