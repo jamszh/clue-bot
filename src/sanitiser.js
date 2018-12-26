@@ -1,46 +1,34 @@
-var pricer = require('./pricer');
-// var q = require('q');
+const ItemObj = require('./item_obj');
 
-// Sanitise the reward list (Deduplication)
-// Process (Fetcher)
-// module.exports = function(list){
+/*
+ * Create a set of items (Dupes removed and quantities handled accordingly)
+ * Return an array of distinct items
+ */
+module.exports = function(input, roller){
+	var distinct = {};
 
-// 	var total_value = 0;
+	input.forEach(element => {
 
-// 	// Holds a unique array stack for the item rewards
-// 	var cleaned = [];
-// 	var organised = [];
+		var quantity = 1;
 
-// 	// Remove Dupes and sum the freq
-// 	list.forEach(function(a){
-// 		if(!this[a.item]){
-// 			this[a.item] = { item: a.item, freq: 0, id: a.id};
-// 			cleaned.push(this[a.item]);
-// 		}
-// 		this[a.item].freq += a.freq;
-// 	}, Object.create(null));
+		if (element.stackable == 1)
+			quantity = roller.roll_stackable(element.item);
 
-// 	// Organising
-// 	cleaned.forEach(function(obj){
-// 		if(obj.item !== 'Coins'){
-// 			var element = pricer(obj.id).then(function(result){
-// 				var element = {
-// 					item: obj.item,
-// 					freq: obj.freq,
-// 					price: result
-// 				}
-// 				return element;
-// 			});
-// 			organised.push(element);
-// 		}else{
-// 			organised.push({
-// 				item: obj.item,
-// 				freq:obj.freq,
-// 				price: 1
-// 			})
-// 		}
-// 	});
+		if (element.id in distinct) {
+			distinct[element.id].quantity += quantity;
+		} else {
+			distinct[element.id] = new ItemObj(element.id, element.item, quantity, null);
+		}
+	});
 
-// 	return q.all(organised);
-// }
+	// Transform dictionary back into an array
+	// Handling duplicates is the only place we need dict structure
+	var keys = Object.keys(distinct);
+	var item_array = [];
 
+	keys.forEach(element => {
+		var item = distinct[element];
+		item_array.push(item);
+	})
+	return item_array;
+}

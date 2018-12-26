@@ -1,26 +1,25 @@
 require('dotenv').config();
 
-
-// Reddit bot - Front End
-
-// Libraries
+/*
+ * Reddit bot - Front End
+ * Initialise libraries
+ */ 
 const Snoowrap = require('snoowrap');
 const Snoostorm = require('snoostorm');
 const comment_gap = "\n\n&nbsp\;\n\n";
-const bot_signature = comment_gap + '^^I\'m ^^a ^^bot.^bleep^bloop';
+const bot_signature = '^(I\'m a bot *bleep bloop*)';
 const horizontal_rule = "\n***\n";
 
+// TODO make this dynamic when other levels implemented
+const hard_header = "\#\#\#Reward casket (hard)";
+const table_header = "Item | Value\n----|:----:\n";
 
 // Imported internal modules
-var Roller = require('./src/roller');
-var Sanitiser = require('./src/sanitiser');
-var Formatter = require('./src/formatter');
-var DB = require('./src/db_interface');
+const Roller = require('./src/roller');
+const Builder = require('./src/builder');
+const DB = require('./src/db_interface');
 
-
-// Initialise database interface instance
-
-
+// TODO - Initialise database interface instance
 // Build Snoowrap and Snoostorm clients
 const r = new Snoowrap({
     userAgent: 'clue-bot',
@@ -37,43 +36,56 @@ const streamOpts = {
     results: 20
 };
 
+// Initialise some instances
+const db = new DB();
+const roller = new Roller();
+const builder = new Builder();
+
+// Only clue level atm
+const level = 'hard';
+
+// Capture
+const re = new RegExp(/^clue-bot.roll\(((easy|medium|hard|elite|master))\);$/i);
+
 // Create a Snoostorm CommentStream with the specified options
 const comments = client.CommentStream(streamOpts);
 
-// On comment, perform whatever logic you want to do
+// On comment, perform the roll
 comments.on('comment', (comment) => {
 
-    var re = new RegExp(/^clue-bot.roll\(((easy|medium|hard|elite|master))\);$/i);
-    var input = comment.body;
-
+    const input = comment.body;
 
     // Temporary status
     var status = true;
 
     if(re.test(input)){
-    	var match = re.exec(input);
-    	var level = match[1].toLowerCase();
+    	const match = re.exec(input);
+    	const requested_level = match[1].toLowerCase();
 
-    	if(level !== "hard"){
+    	if(requested_level !== "hard"){
             status = false;
     	}
 
-        level = 'hard';
+        // Roll!
+        const roll_encoding = roller.roll();
+        const query = db.queryBuilder(roll_encoding, level);
 
-        // Initiate roller instance
-    	var roller = new Roller(level);
-
-        // Roll and Sanitise data
-    	Sanitiser(roller.roll()).then(function(data){
-
-            // Format response
-            var output = Formatter(data);
-
-            if(status === false){
-                output = "\*Other clues coming soon! Here is a hard casket!\*"
-                        + horizontal_rule + output;
-            }
-            comment.reply(output + bot_signature);
+        db.execute(query).then(function(rows) {
+            builder.processResults(rows, roller).then((result) => {
+                var header = '';
+                if(status === false){
+                    header = "\*Other clues coming soon! Here is a hard casket!\*  \n";
+                }
+                comment.reply(
+                    header + 
+                    hard_header +
+                    horizontal_rule + 
+                    table_header +
+                    result + 
+                    horizontal_rule + 
+                    bot_signature
+                );
+            });
         });
     }
 });

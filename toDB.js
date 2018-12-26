@@ -1,3 +1,7 @@
+/*
+ * This file should no longer be necessary. (Was required for the initial item population into db)
+ * Use item_dump.sql instead
+ */
 var Client = require('mariasql');
 
 table = require('./stackables');
@@ -8,19 +12,16 @@ var c = new Client({
 	password: 'Comecomp123'
 });
 
-
 c.query('USE cluebot', function(err, rows) {
 if (err)
 	throw err;
 });
-
 
 c.query('CREATE OR REPLACE TABLE items (id int PRIMARY KEY, item tinytext NOT NULL, level varchar(6) NOT NULL, rarity varchar(6) NOT NULL)', 
 	function(err, rows) {
 if (err)
 	throw err;
 });
-
 
 for(var i = 0; i < table.length; i++){
 	c.query('INSERT INTO items (id, item, level, rarity) VALUES (:id, :item, :level, :rarity)',

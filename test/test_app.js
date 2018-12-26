@@ -1,28 +1,22 @@
-var Roller = require('./../src/roller');
-// var Sanitiser = require('./../src/sanitiser');
-// var formatter = require('./../src/formatter');
-var Builder = require('./../src/builder');
-var DB = require('./../src/db_interface');
+const Roller = require('./../src/roller');
+const Builder = require('./../src/builder');
+const DB = require('./../src/db_interface');
 
+/*
+ * Dummy test for BE
+ * Initialise some constants
+ */ 
+const db = new DB();
+const roller = new Roller();
+const level = 'hard';
+const data = roller.roll();
 
-// // Just a dummy initiate js file
-// // Test the back-end without using reddit etc
-var level = 'hard';
-var roller = new Roller(level);
-var data = roller.roll();
-
-var db = new DB();
-
-var query = db.queryBuilder(data, "hard");
-
+const query = db.queryBuilder(data, "hard");
 db.execute(query).then(function(rows) {
     var builder = new Builder();
 
-    builder.processResults(rows).then((result) => {
+    builder.processResults(rows, roller).then((result) => {
       console.log(result);
       process.exit(22);
     });
 });
-
-db.execute(query);
-

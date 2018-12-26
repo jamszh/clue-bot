@@ -1,14 +1,8 @@
-
 var db = require('./db_interface')
 
-module.exports = class Roller {
-
-	constructor(level){
-		this.level = level;
-	}
-	
+module.exports = class Roller {	
 	/* 
-	 * Method that determines the roll quantity
+	 * Method that determines reward list and encodes it
 	 */
 	roll() {
 	
@@ -70,5 +64,16 @@ module.exports = class Roller {
 			encoding[table_names[i]] = roll_table[i];
 		}
 		return encoding;
+	}
+
+	/*
+     * Arbitrary values, since I'm not sure how they roll stackable quantities
+     */
+    roll_stackable(item_name) {
+		if (item_name == "Coins") {
+            return 2000 + Math.floor(Math.random() * 6666);
+        } else {
+            return 5 + Math.floor(Math.random() * 33);
+        }
 	}
 }
