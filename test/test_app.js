@@ -25,3 +25,4 @@ db.execute(query).then(function(rows) {
 });
 
 db.execute(query);
+
