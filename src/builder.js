@@ -1,85 +1,68 @@
-var pricer = require('./pricer');
-var sanitiser = require('./sanitiser');
-var formatter = require('./formatter');
-var ItemObj = require('./item_obj');
-var q = require('q');
+const pricer = require('./pricer');
+const sanitiser = require('./sanitiser');
+const formatter = require('./formatter');
 
-
+/*
+ * Process the DB rows into workable objects (item_obj)
+ * Steps of the process
+ * 1. Sanitise
+ * 2. Price
+ * 3. Format
+ */ 
 module.exports = class Builder {
-    
-    /*
-     * Process the DB rows into workable objects (item_obj)
-     * Steps of the process
-     * 1. Sanitise
-     * 2. Price
-     * 3. Format
-     */ 
-    processResults(db_rows) {
 
-        var distinct_items = this.sanitiseResults(db_rows)
-        this.priceResults(distinct_items);
-        // var reward_result = [];
-        // var promise_arr = [];
+    processResults(db_rows, roller) {
+        var promise_arr = [];
+        var distinct_items = this.sanitiseResults(db_rows, roller);
 
-        // return q.all(reward_result);
-    }
-
-    /*
-     * Fetch price of each item, and store value in item_obj structure
-     */
-    priceResults(distinct_items) {
-        var keys = Object.keys(distinct_items);
-        keys.forEach(function(key) {
-
-            var item_obj = distinct_items[key];
-            //var p = new Promise((resolve, reject) => {
-            pricer(item_obj.id).then(function(result) {
-                item_obj.price = result;
-                console.log(item_obj);
-                //resolve('done');
-            })    
-            //})
-            // promise_arr.push(p);  
+        return new Promise((resolve, reject) => {
+            try {
+                this.priceResults(distinct_items).then((result) => {
+                    const formatted_output = this.formatResults(distinct_items);
+                    resolve(formatted_output);
+                });
+            } catch (error) {
+                reject(error);
+            }
         })
     }
 
     /*
-     * Create a set of items (Dupes removed and quantities handled accordingly)
+     * Fetch price of each item and then process reward valuation
+     * Store value in item_obj structure
      */
-    sanitiseResults(input) {
-        // Key: Item ID
-        // Value: Obj
-        var distinct = {};
+    priceResults(distinct_items) {
+        var promise_arr = [];
 
-        input.forEach(element => {
+        distinct_items.forEach(function(item_obj) {
 
-            var quantity = 1;
-
-            if (element.stackable == 1)
-                quantity = this.roll_stackable(element.item);
-
-            if (element.id in distinct) {
-                distinct[element.id].quantity += quantity;
-            } else {
-                distinct[element.id] = new ItemObj(element.id, element.item, quantity, null);
+            // Coins are by definition the value of measure, no need to price
+            if (item_obj.id == 617) {
+                item_obj.price = item_obj.quantity;
+                return;
             }
-        });
-        return distinct;
-    }
 
-    formatResults() {
-
+            promise_arr.push(new Promise((resolve, reject) => {
+                pricer(item_obj).then(function(result) {
+                    item_obj.price = result;
+                    resolve(result);
+                })    
+            }));
+        })
+        return Promise.all(promise_arr);
     }
 
     /*
-     * Arbitrary values, since I'm not sure how they roll stackable quantities
-     * This method should be in roller? If so, it might be a bit tricky to have it that way.
+     * View sanitiser.js
      */
-    roll_stackable(item_name) {
-		if (item_name == "Coins") {
-            return 2000 + Math.floor(Math.random() * 6666);
-        } else {
-            return 5 + Math.floor(Math.random() * 47);
-        }
-	}
+    sanitiseResults(input, roller) {
+        return sanitiser(input, roller);
+    }
+
+    /*
+     * View formatter.js
+     */
+    formatResults(input) {
+        return formatter(input);
+    }
 }

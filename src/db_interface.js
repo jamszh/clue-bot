@@ -16,7 +16,6 @@ if (err)
 
 module.exports = class db_interface {
 
-
 	// Return number of rows in table (i.e. number of items)
 	getTableCount(table, level, callback) {
 
