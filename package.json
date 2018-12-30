@@ -17,13 +17,13 @@
   },
   "dependencies": {
     "body-parser": "^1.18.2",
-    "dotenv": "^5.0.0",
-    "events": "^2.0.0",
+    "dotenv": "^6.2.0",
+    "events": "^3.0.0",
     "fs": "0.0.1-security",
     "mariasql": "^0.2.6",
     "node-regexp": "^0.1.1",
     "q": "^1.5.1",
-    "request": "*",
+    "request": "^2.88.0",
     "request-promise": "^4.2.2",
     "snoostorm": "0.0.5",
     "snoowrap": "^1.15.2"

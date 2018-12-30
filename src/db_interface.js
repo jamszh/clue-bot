@@ -1,4 +1,3 @@
-var q = require('q');
 var Client = require('mariasql');
 
 require('dotenv').config();

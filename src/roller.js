@@ -45,7 +45,8 @@ module.exports = class Roller {
 						promote_idx++;
 					}
 
-					// Cannot promote after 3a table
+					// Increment the value at the promoted idx, decrement current
+					// No promotion at idx table.length (No table after 3a)
 					if (promote_idx < roll_table.length) {
 						roll_table[promote_idx]++;
 						roll_table[curr_idx]--;
