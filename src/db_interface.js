@@ -1,7 +1,6 @@
 var Client = require('mariasql');
 
 require('dotenv').config();
-
 var c = new Client({
 	host: process.env.DB_HOST,
 	user: process.env.DB_USER,
