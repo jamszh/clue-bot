@@ -1,6 +1,6 @@
-const pricer = require('./pricer');
-const sanitiser = require('./sanitiser');
-const formatter = require('./formatter');
+const pricer = require('./build_procs/pricer');
+const sanitiser = require('./build_procs/sanitiser');
+const formatter = require('./build_procs/formatter');
 
 /*
  * Process the DB rows into workable objects (item_obj)

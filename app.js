@@ -7,7 +7,7 @@ require('dotenv').config();
 const Snoowrap = require('snoowrap');
 const Snoostorm = require('snoostorm');
 const comment_gap = "\n\n&nbsp\;\n\n";
-const bot_signature = '^(I\'m a bot *bleep bloop*)';
+const bot_signature = '[n]: https://www.reddit.com/message/compose/?to=clue-bot\n\n ^(I\'m a bot *bleep bloop*) | [Report a bug][n]';
 const horizontal_rule = "\n***\n";
 
 // TODO make this dynamic when other levels implemented
@@ -33,7 +33,7 @@ const client = new Snoostorm(r);
 // Configure options for stream: subreddit & results per query
 const streamOpts = {
     subreddit: '2007scape_cluebot',
-    results: 20
+    results: 5
 };
 
 // Initialise some instances
@@ -76,9 +76,10 @@ comments.on('comment', (comment) => {
                 if(status === false){
                     header = "\*Other clues coming soon! Here is a hard casket!\*  \n";
                 }
+                header += hard_header;
+                
                 comment.reply(
                     header + 
-                    hard_header +
                     horizontal_rule + 
                     table_header +
                     result + 
