@@ -1,6 +1,6 @@
-const Roller = require('./../src/roller');
-const Builder = require('./../src/builder');
-const DB = require('./../src/db_interface');
+const Roller = require('./src/roller');
+const Builder = require('./src/builder');
+const DB = require('./src/db_interface');
 
 /*
  * Dummy test for BE
@@ -22,21 +22,21 @@ function test_end_to_end() {
   });
 }
 
-function test_table_completion() {
-  var data;
-  var iter = 0;
-  while(true) {
-    data = roller.roll();
-    console.log(data);
-    iter++;
-    if (data['3a'] !== 0) {
-      console.log("NUM ROLLS => " + iter.toString());
-      break;
-    }
-  }
-}
+//function test_table_completion() {
+//  var data;
+//  var iter = 0;
+//  while(true) {
+//    data = roller.roll();
+//    console.log(data);
+//    iter++;
+//    if (data['3a'] !== 0) {
+//      console.log("NUM ROLLS => " + iter.toString());
+//      break;
+//    }
+//  }
+//}
 
-test_table_completion();
+// test_table_completion();
 test_end_to_end();
 
 

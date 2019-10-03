@@ -1,5 +1,3 @@
-var db = require('./db_interface')
-
 module.exports = class Roller {	
 	/* 
 	 * Method that determines reward list and encodes it

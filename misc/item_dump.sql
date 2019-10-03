@@ -1,8 +1,8 @@
--- MySQL dump 10.16  Distrib 10.1.37-MariaDB, for Linux (x86_64)
+-- MySQL dump 10.16  Distrib 10.1.36-MariaDB, for Linux (x86_64)
 --
 -- Host: localhost    Database: cluebot
 -- ------------------------------------------------------
--- Server version	10.1.37-MariaDB
+-- Server version	10.1.36-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -14,34 +14,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
---
--- Temporary table structure for view `hard_common`
---
-
-DROP TABLE IF EXISTS `hard_common`;
-/*!50001 DROP VIEW IF EXISTS `hard_common`*/;
-SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
-/*!50001 CREATE TABLE `hard_common` (
-  `id` tinyint NOT NULL,
-  `item` tinyint NOT NULL
-) ENGINE=MyISAM */;
-SET character_set_client = @saved_cs_client;
-
---
--- Temporary table structure for view `hard_unique`
---
-
-DROP TABLE IF EXISTS `hard_unique`;
-/*!50001 DROP VIEW IF EXISTS `hard_unique`*/;
-SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
-/*!50001 CREATE TABLE `hard_unique` (
-  `id` tinyint NOT NULL,
-  `item` tinyint NOT NULL
-) ENGINE=MyISAM */;
-SET character_set_client = @saved_cs_client;
 
 --
 -- Table structure for table `items`
@@ -85,44 +57,6 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Final view structure for view `hard_common`
---
-
-/*!50001 DROP TABLE IF EXISTS `hard_common`*/;
-/*!50001 DROP VIEW IF EXISTS `hard_common`*/;
-/*!50001 SET @saved_cs_client          = @@character_set_client */;
-/*!50001 SET @saved_cs_results         = @@character_set_results */;
-/*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8 */;
-/*!50001 SET character_set_results     = utf8 */;
-/*!50001 SET collation_connection      = utf8_general_ci */;
-/*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`James`@`%` SQL SECURITY DEFINER */
-/*!50001 VIEW `hard_common` AS select `i`.`id` AS `id`,`i`.`item` AS `item` from `items` `i` where (((`i`.`level` = 'hard') or (`i`.`level` = 'all')) and (`i`.`rarity` = 'common')) */;
-/*!50001 SET character_set_client      = @saved_cs_client */;
-/*!50001 SET character_set_results     = @saved_cs_results */;
-/*!50001 SET collation_connection      = @saved_col_connection */;
-
---
--- Final view structure for view `hard_unique`
---
-
-/*!50001 DROP TABLE IF EXISTS `hard_unique`*/;
-/*!50001 DROP VIEW IF EXISTS `hard_unique`*/;
-/*!50001 SET @saved_cs_client          = @@character_set_client */;
-/*!50001 SET @saved_cs_results         = @@character_set_results */;
-/*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8 */;
-/*!50001 SET character_set_results     = utf8 */;
-/*!50001 SET collation_connection      = utf8_general_ci */;
-/*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`James`@`%` SQL SECURITY DEFINER */
-/*!50001 VIEW `hard_unique` AS select `i`.`id` AS `id`,`i`.`item` AS `item` from `items` `i` where (((`i`.`level` = 'hard') or (`i`.`level` = 'all')) and (`i`.`rarity` = 'unique')) */;
-/*!50001 SET character_set_client      = @saved_cs_client */;
-/*!50001 SET character_set_results     = @saved_cs_results */;
-/*!50001 SET collation_connection      = @saved_col_connection */;
-
---
 -- Final view structure for view `pages`
 --
 
@@ -135,7 +69,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET character_set_results     = utf8 */;
 /*!50001 SET collation_connection      = utf8_general_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`James`@`%` SQL SECURITY DEFINER */
+/*!50013 */
 /*!50001 VIEW `pages` AS select `i`.`id` AS `id`,`i`.`item` AS `item` from `items` `i` where (`i`.`rarity` = 'pages') */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
@@ -150,4 +84,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-26 11:10:16
+-- Dump completed on 2018-12-30 17:26:14
