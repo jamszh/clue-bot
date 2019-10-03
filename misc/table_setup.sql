@@ -1,7 +1,3 @@
-
-
-
-
 create or replace table stackables (
     id smallint NOT NULL AUTO_INCREMENT PRIMARY KEY,
     item_id int NOT NULL,
