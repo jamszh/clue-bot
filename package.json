@@ -1,0 +1,35 @@
+{
+  "name": "clue-bot",
+  "version": "1.0.0",
+  "description": "Casket roller",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=dev node app.js",
+    "test": "node test/test_app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JavaLeg/reddit-bots.git"
+  },
+  "author": "Javaleg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JavaLeg/reddit-bots/issues"
+  },
+  "dependencies": {
+    "@types/dotenv": "^8.2.0",
+    "body-parser": "^1.18.2",
+    "dotenv": "^6.2.0",
+    "events": "^3.0.0",
+    "fs": "0.0.1-security",
+    "mariasql": "^0.2.6",
+    "node-regexp": "^0.1.1",
+    "q": "^1.5.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "snoostorm": "0.0.5",
+    "snoowrap": "^1.15.2",
+    "ws": "^7.2.0"
+  },
+  "homepage": "https://github.com/JavaLeg/reddit-bots#readme"
+}
