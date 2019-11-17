@@ -4,7 +4,8 @@
   "description": "Casket roller",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "test": "node test/test_app.js"
   },
   "repository": {
     "type": "git",
@@ -16,6 +17,7 @@
     "url": "https://github.com/JavaLeg/reddit-bots/issues"
   },
   "dependencies": {
+    "@types/dotenv": "^8.2.0",
     "body-parser": "^1.18.2",
     "dotenv": "^6.2.0",
     "events": "^3.0.0",

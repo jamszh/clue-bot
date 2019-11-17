@@ -2,7 +2,7 @@
 module.exports = function(data){
 	var total_value = 0;
 	var output = '';
-	
+
 	data.forEach(function(obj){
 		output += obj.name;
 		if (obj.quantity > 1) {
@@ -12,13 +12,13 @@ module.exports = function(data){
 		total_value += obj.price;
 	})
 	output += "\n\n";
-	output += "\*Your clue is worth ~ " + convert_to_string(total_value) + ".\*\n\n";
+	output += "\*Your clue is worth ~ " + convert_to_string(total_value) + "\*\n\n";
 	return output;
 }
 
 /*
  * Convert long numbers back into readable strings with 'osrs' convention
- */ 
+ */
 function convert_to_string(value){
 	var str = value.toString();
 
