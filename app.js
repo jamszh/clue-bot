@@ -33,10 +33,10 @@ const r = new Snoowrap({
 console.log("Initialising snoowrap instance");
 const client = new Snoostorm(r);
 
-// Configure options for stream: subreddit & results per query
+// comment stream for both 2007scape & 2007scape_cluebot
 const streamOpts = {
-  subreddit: '2007scape_cluebot',
-  results: 10
+  subreddit: '2007scape_cluebot+2007scape',
+  results: 15
 };
 
 // Initialise some instances
