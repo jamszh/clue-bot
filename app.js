@@ -7,7 +7,9 @@ require('dotenv').config();
 const Snoowrap = require('snoowrap');
 const Snoostorm = require('snoostorm');
 const comment_gap = "\n\n&nbsp\;\n\n";
-const bot_signature = '[n]: https://www.reddit.com/message/compose/?to=clue-bot\n\n ^(I\'m a bot *bleep bloop*) | [Report a bug][n]';
+const bot_signature = '[b]: https://www.reddit.com/message/compose/?to=clue-bot\n\n'
+                      + '[s]: https://www.reddit.com/r/2007scape_cluebot/comments/dxjmwu/suggestions_for_cluebot\n\n'
+                      + '^(I\'m a bot *bleep bloop*) | [Report a bug][b] | [Leave a suggestion][s]';
 const horizontal_rule = "\n***\n";
 
 // TODO make this dynamic when other levels implemented
@@ -18,6 +20,7 @@ const table_header = "Item | Value\n----|:----:\n";
 const Roller = require('./src/roller');
 const Builder = require('./src/builder');
 const DB = require('./src/db_interface');
+const ActivationWarning = require('./src/errors/activationWarning');
 
 // TODO - Initialise database interface instance
 // Build Snoowrap and Snoostorm clients
@@ -34,7 +37,7 @@ const client = new Snoostorm(r);
 // Configure options for stream: subreddit & results per query
 const streamOpts = {
   subreddit: '2007scape_cluebot',
-  results: 5
+  results: 10
 };
 
 // Initialise some instances
@@ -70,45 +73,51 @@ function getParent(comment) {
   });
 }
 
-
 // On comment, perform the roll
 comments.on('comment', (comment) => {
   const input = comment.body;
   if(!re.test(input)) { return; }
 
-  // Check post title has cluebot enabled
-  getParent(comment).then((result) => {
-    console.log("Getting submission for parent id: " + result.id);
-    r.getSubmission(result.id).title.then((submission_title) => {
+  const roll_encoding = roller.roll();
 
-      if (!activation_re.test(submission_title)) { return; }
-      console.log("clue-bot enabled for post: " + result.id);
+  getParent(comment)
+    .then((result) => {
+      console.log("Getting submission for parent id: " + result.id);
+      return r.getSubmission(result.id).fetch();
+    })
+    .then(root => {
+      console.log("comment ID: " + root.id);
+      if (!activation_re.test(root.title)) { throw new ActivationWarning("clue-bot not enabled for root ID: " + comment.id); }
+      console.log("clue-bot enabled for root ID: " + root.id);
 
+      const query = db.queryBuilder(roll_encoding, level);
+      return db.execute(query);
+    })
+    .then(rows => builder.processResults(rows, roller))
+    .then(result => {
+      var header = '';
       const match = re.exec(input);
       const requested_level = match[1].toLowerCase();
-      const status = (requested_level === "hard");
+      if (requested_level !== "hard") { header = "\*Other clues coming soon! Here is a hard casket!\*  \n"; }
+      header += hard_header;
 
-      // Roll!
-      const roll_encoding = roller.roll();
-      const query = db.queryBuilder(roll_encoding, level);
+      const reddit_reply = header
+                            + horizontal_rule
+                            + table_header
+                            + result
+                            + horizontal_rule
+                            + bot_signature;
 
-      db.execute(query).then((rows) => {
-        builder.processResults(rows, roller).then((result) => {
-          var header = '';
-          if (!status) { header = "\*Other clues coming soon! Here is a hard casket!\*  \n"; }
-          header += hard_header;
-
-          const reddit_reply = header
-                               + horizontal_rule
-                               + table_header
-                               + result
-                               + horizontal_rule
-                               + bot_signature;
-
-          console.log(reddit_reply);
-          comment.reply(reddit_reply);
-        }).catch(error => console.error(error.message));
-      });
+      return(comment.reply(reddit_reply).id);
+    })
+    .then((result_id) => {
+      console.log("Successful reply to comment: "
+                  + comment.id + " "
+                  + "reply ID: "
+                  + result_id);
+    })
+    .catch(err => {
+      if (err instanceof ActivationWarning) { console.log(err.message); }
+      else { console.error(err); }
     });
-  }).catch(error => console.error(error));
 });

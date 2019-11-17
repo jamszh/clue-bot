@@ -2,7 +2,7 @@ var Client = require('mariasql');
 require('dotenv').config();
 
 var c;
-if (process.env.ENV == 'production') {
+if (process.env.NODE_ENV == 'prd') {
 	c = new Client({
 		host: process.env.DB_HOST,
 		user: process.env.DB_USER,

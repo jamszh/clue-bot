@@ -12,7 +12,6 @@ module.exports = async (item) => {
 
   return new Promise((resolve, reject) => {
       request.get(url, (err, response, body) => {
-        console.log("GE API response: " + response);
         if (err) { reject(err); }
 
         const json = JSON.parse(body);
