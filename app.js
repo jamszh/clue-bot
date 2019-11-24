@@ -30,7 +30,7 @@ const r = new Snoowrap({
   username: process.env.REDDIT_USER,
   password: process.env.REDDIT_PASS
 });
-console.log("Initialising snoowrap instance");
+
 const client = new Snoostorm(r);
 
 // comment stream for both 2007scape & 2007scape_cluebot
@@ -41,7 +41,6 @@ const streamOpts = {
 
 // Initialise some instances
 const db = new DB();
-console.log("Connected to DB.");
 
 const roller = new Roller();
 const builder = new Builder();
@@ -111,7 +110,7 @@ comments.on('comment', (comment) => {
     })
     .then((result_id) => {
       console.log("Successful reply to comment: "
-                  + comment.id + " "
+                  + comment.id + " --- "
                   + "reply ID: "
                   + result_id);
     })

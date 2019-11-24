@@ -3,7 +3,7 @@ A simple oldschool runescape clue reward simulator in the form of a subreddit bo
 
 
 ### Usage
-Enable clue-bot to listen to threads by adding the `$cb` keyword in the title:
+Enable clue-bot to listen to threads by adding the `$cb` keyword to the title:
 
 ![Activation](misc/activate.png?raw=true)  
 

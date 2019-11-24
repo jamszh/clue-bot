@@ -1,24 +1,31 @@
-var Client = require('mariasql');
+var Client = require('mysql');
 require('dotenv').config();
 
-var c;
+var connection;
 if (process.env.NODE_ENV == 'prd') {
-	c = new Client({
+	connection = Client.createConnection({
 		host: process.env.DB_HOST,
 		user: process.env.DB_USER,
-		password: process.env.DB_PASS
+		password: process.env.DB_PASS,
+		database: process.env.DB_NAME
 	});
 } else {
-	c = new Client({
+	connection = Client.createConnection({
 		host: process.env.LOCAL_DB_HOST,
 		user: process.env.LOCAL_DB_USER,
-		password: process.env.LOCAL_DB_PASS
+		password: process.env.LOCAL_DB_PASS,
+		database: process.env.LOCAL_DB_NAME
 	});
 }
 
-c.query('USE cluebot', (err) => {
-	if (err) { throw err; }
-});
+connection.connect((err) => {
+	if (err) { 
+		console.error('Error connecting...' + err.stack);
+		return;
+	}
+	console.log('Thread ' + connection.threadId + ' connected to DB');
+})
+
 
 module.exports = class db_interface {
 
@@ -30,7 +37,7 @@ module.exports = class db_interface {
      * @param callback callback method
      */
 		var query = 'SELECT COUNT(*) as c from ' + table + '_' + level;
-		c.query(query, (err, rows) => {
+		connection.query(query, (err, rows) => {
 			if (err) {
 				callback(null, err);
 			} else {
@@ -75,7 +82,7 @@ module.exports = class db_interface {
      * @param query
      */
 		return new Promise((resolve, reject) => {
-			c.query(query, (err, rows) => {
+			connection.query(query, (err, rows) => {
 				if (err) { reject(err); }
 				resolve(rows);
 			})
