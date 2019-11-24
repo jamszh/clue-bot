@@ -1,22 +1,12 @@
-var Client = require('mysql');
+const Client = require('mysql');
 require('dotenv').config();
 
-var connection;
-if (process.env.NODE_ENV == 'prd') {
-	connection = Client.createConnection({
+const connection = Client.createConnection({
 		host: process.env.DB_HOST,
 		user: process.env.DB_USER,
 		password: process.env.DB_PASS,
 		database: process.env.DB_NAME
 	});
-} else {
-	connection = Client.createConnection({
-		host: process.env.LOCAL_DB_HOST,
-		user: process.env.LOCAL_DB_USER,
-		password: process.env.LOCAL_DB_PASS,
-		database: process.env.LOCAL_DB_NAME
-	});
-}
 
 connection.connect((err) => {
 	if (err) { 

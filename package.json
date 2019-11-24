@@ -4,18 +4,17 @@
   "description": "Casket roller",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=dev node app.js",
-    "startwin": "set NODE_ENV=dev node app.js",
+    "start": "node app.js",
     "test": "node test/test_app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JavaLeg/reddit-bots.git"
+    "url": "git+https://github.com/J-Leg/clue-bot"
   },
   "author": "J-leg",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JavaLeg/reddit-bots/issues"
+    "url": "https://github.com/J-Leg/clue-bot/issues"
   },
   "dependencies": {
     "@types/dotenv": "^8.2.0",
